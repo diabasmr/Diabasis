@@ -118,7 +118,7 @@ nav a:active{
 	color: coral;
 }
 
-/*images fond*/
+/*LANDING PAGE*/
 #landingPage {
     position: relative; /* Permet de positionner les éléments enfants */
     overflow: visible;   /* Assure que rien ne déborde */
@@ -133,30 +133,6 @@ nav a:active{
     z-index: -1; /* Place l'image derrière le contenu */
     opacity: 0.7; /* Rend l'image légèrement transparente */
 }
-
-#competences {
-    position: relative; /* Permet de positionner les éléments enfants */
-    overflow: visible;   /* Assure que rien ne déborde */
-}
-
-#flowerbg {
-    position: absolute; /* Permet de positionner l'image par rapport à la section */
-    top: 0;
-    left: 0;
-    width: 100%; /* Adapte l'image à la largeur du conteneur */
-    height: auto; /* Garde le ratio de l'image */
-    z-index: -1; /* Place l'image derrière le contenu */
-    opacity: 0.7; /* Rend l'image légèrement transparente */
-}
-
-#skills, #tools, #education, #works{
-	display:flex;
-	margin-bottom: 50px;
-	z-index:2;
-	position: relative; /* Assure que le contenu est au-dessus de l'image */
-    z-index: 1; /* Place le contenu au-dessus de l'image */
-}
-
 
 /*Presentation perso*/
 #presentation{
@@ -194,6 +170,30 @@ nav a:active{
 
 #intro strong{
 	color:#6e6d6d;
+}
+
+/*COMPETENCES*/
+#competences {
+    position: relative; /* Permet de positionner les éléments enfants */
+    overflow: visible;   /* Assure que rien ne déborde */
+}
+
+#flowerbg {
+    position: absolute; /* Permet de positionner l'image par rapport à la section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Adapte l'image à la largeur du conteneur */
+    height: auto; /* Garde le ratio de l'image */
+    z-index: -1; /* Place l'image derrière le contenu */
+    opacity: 0.7; /* Rend l'image légèrement transparente */
+}
+
+#skills, #tools, #education, #works{
+	display:flex;
+	margin-bottom: 50px;
+	z-index:2;
+	position: relative; /* Assure que le contenu est au-dessus de l'image */
+    z-index: 1; /* Place le contenu au-dessus de l'image */
 }
 
 /*Footer*/
