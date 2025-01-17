@@ -1,0 +1,291 @@
+@font-face{
+	font-family: Art-nuvo;
+	src: url(../fonts/FontsFree-Net-Art-nuvo.ttf)
+}
+
+@font-face{
+	font-family: Playfair-display;
+	src: url(../fonts/FontsFree-Net-PlayfairDisplay6woff2.ttf)
+}
+
+body{
+	background-color: #eee9d6;
+	color:#123108;
+	font-family: Playfair-display;
+	font-size: 16px;
+	line-height:1.6em;
+	margin:0;
+}
+
+a{
+	text-decoration: underline;
+	color:white;
+}
+
+a:hover{
+	color:pink;
+}
+
+a:active{
+	color:coral;
+}
+
+.clr{
+	clear: both;
+}
+
+.btn{
+	font-size: 0.8rem;
+	font-weight: 700;
+	background-color:#333;
+	color:#fff;
+	padding:10px 15px;
+	margin:auto;
+	border:none;
+	transition: transform 0.3s ease 0s, background-color 0.3s, color 0.3s;
+}
+
+.btn:hover{
+	transform:translateY(-5px);
+	background:white;
+	color:pink;
+}
+
+.container{
+	width:60%;
+	margin:auto;
+	overflow: hidden;
+}
+
+/*the real deal*/
+
+header img:first-child{
+	float:left;
+	margin-left: 10px;
+	position: fixed;
+	z-index: 9999;
+	height:85px;
+}
+
+#barre{
+	width:100%;
+}
+
+nav{
+	top:-50em;
+	background-color:#aab687;
+	color:white;
+	width:20%;
+	height: 40em;
+	border-radius: 0 0 100px 100px;
+	text-align: center;
+	position: absolute;
+	z-index: 999;
+	transition: top 0.3s;
+}
+
+nav.open{
+	top:0;
+	position: fixed;
+}
+
+nav ul{
+	font-family: Art-nuvo;
+	padding: 25%;
+	list-style:none;
+}
+
+nav li{
+	margin: 20px 30px;
+}
+
+nav a{
+	color:white;
+	text-decoration:none;
+	font-size:18px;
+	padding-right:15px;
+}
+
+nav a img{
+	height: 60px;
+	transition: transform 0.3s ease 0s;
+}
+
+nav a img:hover{
+	transform:translateY(-5px);
+}
+
+nav a:active{
+	color: coral;
+}
+
+/*contenu*/
+#content{
+	display:flex;
+	justify-content: space-around;
+}
+
+#sidebar{
+	float:left;
+	width:15%;
+}
+
+#mugler{
+	height:300px;
+	position:relative;
+	z-index: 1;
+	left:50px;
+}
+
+#basterds{
+	height: 200px;
+	position:relative;
+	z-index: 2;
+	top:-100px;
+	left:40px;
+}
+
+#pearls{
+	width: 110%;
+	position:relative;
+	z-index: 2;
+	top:-160px;
+	left:-20px;
+}
+
+#frame{
+	width: 90%;
+	position:relative;
+	z-index: 1;
+	top:-340px;
+	left:85px;
+}
+
+#laurynn{
+	width: 50%;
+	position:relative;
+	z-index: 2;
+	top:-430px;
+	left:15px;
+}
+
+#title{
+	font-family: Art-nuvo;
+	text-align: center;
+	color: pink;
+	font-size: 50px;
+	margin:20px 0 0 0;
+	font-weight: bolder;
+}
+
+.gallery-icons{
+	display:grid;
+	grid-template-areas:"top top"
+	"bottom bottom";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 300px 300px;
+	width: 70%;
+	margin:100px 0;
+	text-align: center;
+}
+
+#news1{
+	z-index: 10;
+	grid-area:top;
+	width:50%;
+}
+
+#news2{
+	z-index: 10;
+	grid-area:top;
+	width:50%;
+}
+
+#news3{
+	z-index: 10;
+	grid-area:bottom;
+	width:50%;
+}
+
+#news4{
+	z-index: 10;
+	grid-area:bottom;
+	width:50%;
+}
+
+#sidebar-right{
+	height:500px;
+	float:right;
+	width:15%;
+}
+
+#azurasmar{
+	height:200px;
+	position:relative;
+	z-index: 1;
+	right:3px;
+}
+
+#seductive{
+	height: 500px;
+	position:relative;
+	z-index: 2;
+	top:-160px;
+	right:45px;
+}
+
+#detectives{
+	height: 200px;
+	position:relative;
+	z-index: 1;
+	top:-430px;
+	right:40px;
+}
+
+#budapest{
+	width: 500px;
+	position:relative;
+	z-index: 2;
+	top:-570px;
+	right:260px;
+}
+
+#escarpo{
+	width: 300px;
+	position:relative;
+	z-index: 3;
+	top:-620px;
+	right:50px;
+}
+
+
+#main-footer{
+	height:300px;
+	background: #333;
+	color:#fff;
+	text-align: center;
+	padding:20px;
+	margin-top:40px;
+}
+
+#side-footer{
+	width:33.3%;
+	float: left;
+	text-align: center;
+	background: #333;
+	color:#fff;
+	padding:10px;
+	box-sizing:border-box;
+}
+
+@media(max-width:600px){
+	#main{
+		width:100%;
+		float:none;
+	}
+	
+	#sidebar{
+		width:100%;
+		float:none;
+	}
+}
