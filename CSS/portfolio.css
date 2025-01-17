@@ -149,6 +149,10 @@ nav a:active{
     font-size: 60px;
 }
 
+#intro strong{
+	color:#6e6d6d;
+}
+
 /*Footer*/
 #main-footer{
 	height:300px;
