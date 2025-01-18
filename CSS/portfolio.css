@@ -230,6 +230,14 @@ nav a:active{
 	grid-row: 2 / 2;    /* Occupe la ligne 1 */
 }
 
+/*PROJETS*/
+#works div{
+border: 3px solid pink; /* Cadre rose de 3 pixels */
+  width: 200px;           /* Largeur des cadres */
+  height: 150px;          /* Hauteur des cadres */
+  margin: 10px;           /* Espacement entre les cadres */
+  display: inline-block;  /* Pour que les cadres s'affichent en ligne */
+}
 
 /*Footer*/
 #main-footer{
