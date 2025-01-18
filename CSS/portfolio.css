@@ -176,6 +176,7 @@ nav a:active{
 #competences {
     position: relative; /* Permet de positionner les éléments enfants */
     overflow: visible;   /* Assure que rien ne déborde */
+	margin-top:100px;
 }
 
 #flowerbg {
@@ -185,16 +186,50 @@ nav a:active{
     width: 100%; /* Adapte l'image à la largeur du conteneur */
     height: auto; /* Garde le ratio de l'image */
     z-index: -1; /* Place l'image derrière le contenu */
-    opacity: 0.7; /* Rend l'image légèrement transparente */
+    opacity: 0.5; /* Rend l'image légèrement transparente */
 }
 
 #skills, #tools, #education, #works{
-	display:flex;
-	margin-bottom: 50px;
+	font-size:20px;
 	z-index:2;
 	position: relative; /* Assure que le contenu est au-dessus de l'image */
     z-index: 1; /* Place le contenu au-dessus de l'image */
 }
+
+#front{
+	display: grid; /*active la grille*/
+	margin:10px 10%;
+	gap: 50px;
+  	grid-template-columns: 50% 40%; /* 2 colonnes : 1 part x4 */
+  	grid-template-rows: 300px auto; /* 2 lignes : 300px de hauteur, une ligne flexible */
+}
+
+#skills {
+	grid-column: 2 / 2; /* Occupe de la colonne 1 à 2 */
+	grid-row: 1 / 2;    /* Occupe la ligne 1 */
+}
+
+#skills li{
+	display: inline;
+	margin: 30px 50px;
+}
+
+#tools {
+	grid-column: 2 / 2; /* Occupe de la colonne 1 à 3 */
+	grid-row: 2 / 2;    /* Occupe la ligne 1 */
+}
+
+#tools li{
+	list-style: none;
+	line-height: 45px;
+	color:#030701;
+}
+
+#education {
+	grid-column: 1 / 2; /* Occupe de la colonne 1 à 3 */
+	grid-row: 2 / 2;    /* Occupe la ligne 1 */
+}
+
 
 /*Footer*/
 #main-footer{
