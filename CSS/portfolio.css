@@ -244,8 +244,9 @@ nav a:active{
 
 #works div{
   border: 3px solid pink; /* Cadre rose de 3 pixels */
+  background-color: pink;
   width: 30%;           /* Largeur des cadres */
-  height: 200px;          /* Hauteur des cadres */
+  height: 300px;          /* Hauteur des cadres */
   margin-top: 30px;           /* Espacement entre les cadres */
   display: inline-block;  /* Pour que les cadres s'affichent en ligne */
 }
