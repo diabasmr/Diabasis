@@ -149,8 +149,7 @@ nav a:active{
 	margin: 10% 0 12.5% 40%;
 }
 
-#intro{
-	opacity:0;
+#intro2{
 	bottom: 10%;
     left: 50%;
 	margin:200px 10px 200px 1.3em;
@@ -159,16 +158,12 @@ nav a:active{
 	transition: opacity 0.3s ease-in-out; /* Transition fluide */
 }
 
-#intro.show {
-	opacity:1
-}
-
-#intro h1{
+#intro2 h1{
 	font-family:Art-nuvo;
     font-size: 60px;
 }
 
-#intro strong{
+#intro2 strong{
 	color:#6e6d6d;
 }
 
