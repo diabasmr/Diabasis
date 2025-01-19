@@ -26,6 +26,15 @@ a:hover{
 	color:pink;
 }
 
+footer a{
+	text-decoration: none;
+	color:white;
+}
+
+footer a:hover{
+	color:pink;
+}
+
 a:active{
 	color:coral;
 }
