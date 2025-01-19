@@ -51,15 +51,6 @@ a:active{
 	color:pink;
 }
 
-.container{
-	display:flex;
-	justify-content: space-around;
-	text-align: center;
-	width:80%;
-	margin:10px auto 30px auto;
-	overflow: hidden;
-}
-
 /*the real deal - nav bar coulissante*/
 
 header img:first-child{
@@ -291,6 +282,15 @@ nav a:active{
 	color:#fff;
 	padding:10px;
 	box-sizing:border-box;
+}
+
+.container{
+	display:flex;
+	justify-content: space-around;
+	text-align: center;
+	width:80%;
+	margin:10px auto 30px auto;
+	overflow: hidden;
 }
 
 @media(max-width:600px){
