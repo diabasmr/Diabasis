@@ -207,15 +207,11 @@ nav a:active{
 
 /*tab*/
 
-h2{
+.reminder h2{
 	text-align:center;
-	margin-top:200px;
+	margin-top:50px;
 	font-family: Art-nuvo;
 	color: #db7c84;
-}
-
-h3{
-	font-family: Art-nuvo;
 }
 
 .container{
