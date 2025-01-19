@@ -57,6 +57,11 @@
 	font-weight: bolder;
 }
 
+.piece a{
+	text-decoration: underline;
+	color:#123108;
+}
+
 .gallery-icons{
 	display:grid;
 	grid-template-areas:"top top"
