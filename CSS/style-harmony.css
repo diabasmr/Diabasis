@@ -71,18 +71,20 @@ a:active{
 	overflow: hidden;
 }
 
-/*the real deal: NAVBAR DEROULANTE*/
+/*the real deal*/
+/*BARRE ACCUEIL*/
+#barre{
+	width:100%;
+}
 
+/*MENU DEROULANT*/
+/*ICONE MENU*/
 header img:first-child{
 	float:left;
 	margin-left: 10px;
 	position: fixed;
 	z-index: 9999;
 	height:85px;
-}
-
-#barre{
-	width:100%;
 }
 
 nav{
