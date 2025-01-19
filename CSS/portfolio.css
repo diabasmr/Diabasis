@@ -17,12 +17,12 @@ body{
 	margin:0;
 }
 
-a{
+footer a{
 	text-decoration: none;
 	color:white;
 }
 
-a:hover{
+footer a:hover{
 	color:pink;
 }
 
@@ -251,9 +251,18 @@ nav a:active{
 }
 
 #works img{
-	height: 80%;
+	width: 95%;
 	border-radius: 30px;
-	margin:10px 10px 0 10px; /*A MODIFIER POUR CENTRER EXACTEMENT PARCE QUE PAS LE TEMPS*/
+	margin:10px 5px 0 5px; /*A MODIFIER POUR CENTRER EXACTEMENT PARCE QUE PAS LE TEMPS*/
+}
+
+#works a{
+	color:#123108;
+	text-decoration: none;
+}
+
+#works a:hover{
+	color:#db7c84;
 }
 
 #works h3{
