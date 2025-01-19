@@ -1,4 +1,6 @@
 /*contenu*/
+
+/*PREBLEME LARGEUR TROP GRANDE*/
 #content{
 	display:flex;
 	justify-content: space-around;
