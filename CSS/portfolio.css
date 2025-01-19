@@ -121,7 +121,7 @@ nav a:active{
 /*LANDING PAGE*/
 #landingPage {
     position: relative; /* Permet de positionner les éléments enfants */
-    overflow: visible;   /* Assure que rien ne déborde */
+    overflow: visible;   
 }
 
 #treebg {
@@ -246,6 +246,12 @@ nav a:active{
   height: 300px;          /* Hauteur des cadres */
   margin-top: 30px;           /* Espacement entre les cadres */
   display: inline-block;  /* Pour que les cadres s'affichent en ligne */
+  overflow: hidden; /* Assure que rien ne déborde */
+}
+
+#works img{
+	height: 80%;
+	border-radius: 30px;
 }
 
 /*Footer*/
