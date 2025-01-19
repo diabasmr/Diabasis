@@ -252,6 +252,7 @@ nav a:active{
 #works img{
 	height: 80%;
 	border-radius: 30px;
+	margin:10px; /*A MODIFIER POUR CENTRER EXACTEMENT PARCE QUE PAS LE TEMPS*/
 }
 
 /*Footer*/
