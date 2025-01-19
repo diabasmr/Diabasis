@@ -229,18 +229,19 @@ h3{
 	margin:20px auto;
 }
 
+/*Footer*/
 #main-footer{
 	height:300px;
 	background: #333;
 	color:#fff;
 	text-align: center;
+	align-items: center;
 	padding:20px;
 	margin-top:40px;
 }
 
 #side-footer{
-	width:33.3%;
-	float: left;
+	width:30%;
 	text-align: center;
 	background: #333;
 	color:#fff;
