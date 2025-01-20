@@ -53,27 +53,28 @@
 
 /*livres*/
 .books {
+	overflow: scroll;
 	max-width: 100%;
 	margin-bottom: 0;
 	overflow: scroll;
 	display: flex;
 	gap: 0;
-	justify-content: center;
 	/* Alignement horizontal (au centre) */
 	align-items: end;
-	/* Alignement vertical (au centre) */
+	/*
+	 Alignement vertical (au centre) 
 	overflow: scroll;
-	/* Allow scrolling */
+	 Allow scrolling 
 	scrollbar-width: none;
-	/* Hide scrollbar in Firefox */
+	 Hide scrollbar in Firefox 
 	-ms-overflow-style: none;
-	/* Hide scrollbar in Internet Explorer/Edge */
+	 Hide scrollbar in Internet Explorer/Edge */
 }
 
-.books::-webkit-scrollbar {
+/*.books::-webkit-scrollbar {
 	display: none;
-	/* Hide scrollbar in Chrome, Safari, and Edge */
-}
+	Hide scrollbar in Chrome, Safari, and Edge 
+}*/
 
 .livre {
 	margin: 0;
@@ -85,12 +86,16 @@
 	height: 400px;
 }
 
+.poche-en {
+	height: 450px;
+}
+
 .broche {
 	height: 500px;
 }
 
 .relie {
-	height: 600px;
+	height: 550px;
 }
 
 .artbook {
