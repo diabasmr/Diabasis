@@ -192,3 +192,13 @@ nav a:active{
 		float:none;
 	}
 }
+
+#working{
+	text-align: center;
+	font-family: Art-nuvo;
+	font-size: 30px;
+	width: 40%;
+	line-height: 70px;
+	color: #333;
+	margin:100px auto;
+}
