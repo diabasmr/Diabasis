@@ -1,44 +1,105 @@
 /*REMINDER TEXT*/
-.reminder h2{
-	text-align:center;
-	margin-top:200px;
+.reminder h2 {
+	text-align: center;
+	margin-top: 200px;
 	font-family: Art-nuvo;
 	color: #db7c84;
 }
 
-.reminder{
+.reminder {
 	width: 40%;
-	margin:20px auto;
+	margin: 20px auto;
 }
 
-/*FOOTER*/
-#main-footer{
-	height:300px;
-	background: #333;
-	color:#fff;
+/*CURRENT READ*/
+#current-read {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	background-color: #333;
+	border: solid 5px black;
+}
+
+/*PROGRESS % READ*/
+#progresspercent {
+	width: 6px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #db7c84;
+}
+
+#progressbar {
+	color: #414e27;
+	font-weight: bold;
+	overflow: hidden;
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #758e46;
+}
+
+#info{
+	font-size: 30px;
 	text-align: center;
-	padding:20px;
-	margin-top:40px;
+	margin: 100px;
+	color:#db7c84;
 }
 
-#side-footer{
-	width:33.3%;
-	float: left;
+/*livres*/
+.books {
+	max-width: 100%;
+	margin-bottom: 0;
+	overflow: scroll;
+	display: flex;
+	gap: 0;
+	justify-content: center;
+	/* Alignement horizontal (au centre) */
+	align-items: end;
+	/* Alignement vertical (au centre) */
+	overflow: scroll;
+	/* Allow scrolling */
+	scrollbar-width: none;
+	/* Hide scrollbar in Firefox */
+	-ms-overflow-style: none;
+	/* Hide scrollbar in Internet Explorer/Edge */
+}
+
+.books::-webkit-scrollbar {
+	display: none;
+	/* Hide scrollbar in Chrome, Safari, and Edge */
+}
+
+.livre {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.poche {
+	height: 400px;
+}
+
+.broche {
+	height: 500px;
+}
+
+.relie {
+	height: 600px;
+}
+
+.artbook {
+	height: 700px;
+}
+
+#omarsite{
+	color: #333;
+	margin: 50px;
+	font-size: 30px;
 	text-align: center;
-	background: #333;
-	color:#fff;
-	padding:10px;
-	box-sizing:border-box;
-}
-
-@media(max-width:600px){
-	#main{
-		width:100%;
-		float:none;
-	}
-	
-	#sidebar{
-		width:100%;
-		float:none;
-	}
 }
