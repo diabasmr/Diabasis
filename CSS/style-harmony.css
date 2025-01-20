@@ -92,11 +92,11 @@ header img:first-child{
 }
 
 nav{
-	top:-50em;
+	top:-60em;
 	background-color:#aab687;
 	color:white;
 	width:20%;
-	height: 45em;
+	height: 40em;
 	border-radius: 0 0 100px 100px;
 	text-align: center;
 	position: absolute;
