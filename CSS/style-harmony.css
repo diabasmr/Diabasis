@@ -15,8 +15,8 @@ body{
 	background-color: #eee9d6;
 	color:#123108;
 	font-family: Playfair-display;
-	font-size: 16px;
-	line-height:1.6em;
+	font-size: clamp(1rem, 1.6vw, 1.2rem); /* Adaptatif selon la taille de l'écran */
+    line-height: 1.8; /* Lisibilité accrue */
 	margin:0;
 }
 
@@ -41,6 +41,11 @@ footer a:hover{
 
 a:active{
 	color:coral;
+}
+
+a:focus {
+    outline: 2px dashed #db7c84;
+    outline-offset: 4px;
 }
 
 /*CLEAR*/
@@ -69,7 +74,8 @@ a:active{
 
 /*CENTRAGE*/
 .container{
-	width:60%; /*A  80 sur library*/
+	width:90%; /*A  80 sur library*/
+	max-width: 1200px;
 	margin:auto;
 	overflow: hidden;
 }
@@ -88,42 +94,45 @@ header img:first-child{
 	position: fixed;
 	top:0;
 	z-index: 9999;
-	height:85px;
+	height:5rem;
 }
 
 nav{
-	top:-60em;
+	top: -50em;
 	background-color:#aab687;
 	color:white;
 	width:20%;
-	height: 40em;
+	height: 50em;
 	border-radius: 0 0 100px 100px;
 	text-align: center;
+	align-items: center;
 	position: absolute;
 	z-index: 999;
-	transition: top 0.3s;
+    transition: top 0.3s ease;
 }
 
 nav.open{
-	top:0;
+	top: 0;
 	position: fixed;
 }
 
 nav ul{
+	align-items: center;
+	text-align: center;
 	font-family: Art-nuvo;
-	padding: 25%;
 	list-style:none;
+	padding-top: 40%;
+	margin-right:20%;
 }
 
 nav li{
-	margin: 20px 30px;
+	margin-bottom: 30%;
+	font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 nav a{
 	color:white;
 	text-decoration:none;
-	font-size:18px;
-	padding-right:15px;
 }
 
 nav a img{
@@ -141,13 +150,13 @@ nav a:active{
 
 /*FOOTER*/
 #main-footer{
-	height:300px;
+	padding:2rem;
+	margin-top:2rem;
+	height:30rem;
 	background: #333;
 	color:#fff;
 	text-align: center;
 	align-items: center;
-	padding:20px;
-	margin-top:40px;
 }
 
 #side-footer{
@@ -173,19 +182,55 @@ nav a:active{
 		width:100%;
 		float:none;
 	}
+
+	#barre{
+		display:none;  /*PAS ENCORE SURE POUR CA*/
+	}
+
+	nav {
+        width: 100%;
+        height: auto;
+		display:none;
+        border-radius: 0;
+		/*modifier et mettre le text en haut*/
+    }
+	
+	nav.open{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	
 	#sidebar{
 		width:100%;
 		float:none;
 	}
+
+	#main-footer{
+		height:auto;
+	}
+
+	.footer-container {
+        flex-direction: column;
+        align-items: center;
+	}
 }
 
 #working{
+	z-index:1;
+	align-items: center;
 	text-align: center;
-	font-family: Art-nuvo;
-	font-size: 30px;
 	width: 40%;
-	line-height: 70px;
 	color: #333;
-	margin:100px auto;
+	margin: 100px auto;
+}
+
+#working h1{
+	font-family: Art-nuvo;
+	font-size: 2rem;
+	color: #333;
+}
+
+#working img{
+	width:70%;
 }
