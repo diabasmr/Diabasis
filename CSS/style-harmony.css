@@ -13,7 +13,7 @@ body{
 	padding: 0;
 	overflow-x: hidden; /* Prevent horizontal scrolling */
 	background-color: #eee9d6;
-	color:#123108;
+	color:black;
 	font-family: Playfair-display;
 	font-size: clamp(1rem, 1.6vw, 1.2rem); /* Adaptatif selon la taille de l'écran */
     line-height: 1.8; /* Lisibilité accrue */
