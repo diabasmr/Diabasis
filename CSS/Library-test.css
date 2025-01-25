@@ -1,0 +1,133 @@
+/*REMINDER TEXT*/
+.reminder h2 {
+	text-align: center;
+	margin-top: 200px;
+	font-family: Art-nuvo;
+	font-size: 2.5rem;
+	color: #db7c84;
+}
+
+.reminder {
+	font-size: 1.3rem;
+	width: 40%;
+	margin: 2rem auto;
+}
+
+/*CURRENT READ*/
+#current-read {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	line-height: 1rem;
+	background-color: #333;
+	border: solid 5px black;
+}
+
+/*PROGRESS % READ*/
+#progresspercent {
+	width: 36%;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: #db7c84;
+}
+
+#progressbar {
+	color: #414e27;
+	font-weight: bold;
+	overflow: hidden;
+	width: 10rem;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: #758e46;
+}
+
+#info, #omarsite{
+	margin: auto;
+	font-size: 1.7rem;
+	text-align: center;
+	width: 60%;
+	color:#db7c84;
+}
+
+/*livres*/
+.books {
+	overflow: scroll;
+	max-width: 100%;
+	margin-bottom: 0;
+	display: flex;
+	gap: 0;
+	/* Alignement horizontal (au centre) */
+	align-items: end;
+	/*
+	 Alignement vertical (au centre) 
+	overflow: scroll;
+	 Allow scrolling 
+	scrollbar-width: none;
+	 Hide scrollbar in Firefox 
+	-ms-overflow-style: none;
+	 Hide scrollbar in Internet Explorer/Edge */
+}
+
+/*.books::-webkit-scrollbar {
+	display: none;
+	Hide scrollbar in Chrome, Safari, and Edge 
+}*/
+
+.livre {
+	margin: 0;
+	padding: 0;
+	display: block;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.livre:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.poche {
+	height: 25rem;
+}
+
+.poche-en {
+	height: 26rem;
+}
+
+.broche {
+	height: 28rem;
+}
+
+.relie {
+	height: 30rem;
+}
+
+.artbook {
+	height: 40rem;
+}
+
+#omarsite{
+	color: #333;
+	width: 90%;
+}
+
+@media(max-width:600px){
+	#progressbar {
+		width: 8rem;
+	}
+
+	#name-current-book{
+		font-size: 1rem;
+		margin-left:60px;
+	}
+	
+	.reminder {
+		width: 70%;
+		margin: 20px auto;
+	}
+}

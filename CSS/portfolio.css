@@ -123,8 +123,8 @@
   box-shadow: 10px 20px #333;
   background-color: pink;
   width: 30%;           /* Largeur des cadres */
-  height: 300px;          /* Hauteur des cadres */
-  margin-top: 30px;           /* Espacement entre les cadres */
+  height: 290px;          /* Hauteur des cadres */
+  margin-top: 30px;
   display: inline-block;  /* Pour que les cadres s'affichent en ligne */
   overflow: hidden; /* Assure que rien ne déborde */
   text-align: center;
@@ -148,6 +148,11 @@
 #works a:hover{
 	color:#db7c84;
 }
+
+#works div:hover{
+	height: 500px;          /* Hauteur des cadres */
+	transition: height 0.3s ease-in-out;
+  }
 
 #works h3{
 	margin:0 auto;
