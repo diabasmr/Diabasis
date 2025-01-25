@@ -5,63 +5,7 @@
 	text-align: center;
 	color:#db7c84;
 	font-size: 3rem;
-	margin:1rem 0;
 	font-weight: bolder;
-}
-
-/*PREBLEME LARGEUR TROP GRANDE*/
-#content{
-	display:flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-    gap: 2rem;
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 1200px;
-}
-
-#sidebar{
-	float:left;
-	width:15%;
-}
-
-#mugler{
-	height:20rem;
-	position:relative;
-	z-index: 1;
-	left:4rem;
-}
-
-#basterds{
-	height: 13rem;
-	position:relative;
-	z-index: 2;
-	top:-7rem;
-	left:3rem;
-}
-
-#pearls{
-	width: 14rem;
-	position:relative;
-	z-index: 2;
-	top:-11rem;
-	left:-1rem;
-}
-
-#frame{
-	width: 9rem;
-	position:relative;
-	z-index: 1;
-	top:-20.9rem;
-	left:85px;
-}
-
-#laurynn{
-	width: 7rem;
-	position:relative;
-	z-index: 2;
-	top:-42rem;
-	left:8rem;
 }
 
 .piece a{
@@ -77,173 +21,58 @@
 	display:grid;
 	grid-template-areas:"top top"
 	"bottom bottom";
+	gap:10rem;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 300px 300px;
-	width: 60%;
-	margin:100px 0;
+	grid-template-rows: 20rem;
+	width: 90%;
+	margin: 2rem auto;
 	text-align: center;
 }
 
 #news1{
 	z-index: 10;
 	grid-area:top;
-	width:50%;
+	width:70%;
 }
 
 #news2{
 	z-index: 10;
 	grid-area:top;
-	width:50%;
+	width:70%;
 }
 
 #news3{
 	z-index: 10;
 	grid-area:bottom;
-	width:50%;
+	width:70%;
 }
 
 #news4{
 	z-index: 10;
 	grid-area:bottom;
-	width:50%;
+	width:70%;
 }
-
-#sidebar-right{
-	height:500px;
-	float:right;
-	width:15%;
-}
-
-#azurasmar{
-	height:200px;
-	position:relative;
-	z-index: 1;
-	right:0.2rem;
-}
-
-#seductive{
-	height: 20rem;
-	position:relative;
-	z-index: 2;
-	top:-5rem;
-	right:0.1rem;
-}
-
-#detectives{
-	height: 13rem;
-	position:relative;
-	z-index: 1;
-	top:-20rem;
-	right:3rem;
-}
-
-#budapest{
-	width: 25rem;
-	position:relative;
-	z-index: 2;
-	top:-20rem;
-	right:10rem;
-}
-
-#escarpo{
-	width: 12rem;
-	position:relative;
-	z-index: 1;
-	top:-41rem;
-	right:7rem;
-}
-
 h3{
 	text-align: center;
 }
 
-@media(max-width:600px){
+#beyonce{
+	display:block;
+	width:12rem;
+	margin:0 auto;
+}
+
+@media(max-width:1080px){
+	.gallery-icons{
+		grid-template-rows: 15rem;
+	}
+}
+
+@media(max-width:900px){
 	.gallery-icons{
 		display:flex;
 		flex-direction: column;
 		z-index: 14;
-		margin:0;
-	}
-
-	#mugler{
-		height:17rem;
-		position:relative;
-		z-index: 1;
-		left:-4rem;
-	}
-	
-	#basterds{
-		height: 10rem;
-		position:relative;
-		z-index: 2;
-		top:-7rem;
-		left:1.5rem;
-	}
-	
-	#pearls{
-		width: 14rem;
-		position:relative;
-		z-index: 2;
-		top:-11rem;
-		left:-5rem;
-	}
-	
-	#frame{
-		width: 9rem;
-		position:relative;
-		z-index: 1;
-		top:-19.9rem;
-		left:1rem;
-	}
-	
-	#laurynn{
-		width: 5rem;
-		position:relative;
-		z-index: 2;
-		top:-40rem;
-		left:3rem;
-	}
-
-	#azurasmar{
-		height:13rem;
-		position:relative;
-		z-index: 1;
-		right:4rem;
-	}
-	
-	#seductive{
-		height: 20rem;
-		position:relative;
-		z-index: 2;
-		top:-5rem;
-		right:4rem;
-	}
-	
-	#detectives{
-		height: 9rem;
-		position:relative;
-		z-index: 1;
-		top:-20rem;
-		right:5rem;
-	}
-	
-	#budapest{
-		width: 15rem;
-		position:relative;
-		z-index: 2;
-		top:-10rem;
-		right:9rem;
-	}
-	
-	#escarpo{
-		width: 12rem;
-		position:relative;
-		z-index: 1;
-		top:-31rem;
-		right:7rem;
-	}
-
-	#sidebar, #side-right{
-		width:5%;
+		justify-content:center;
 	}
 }
