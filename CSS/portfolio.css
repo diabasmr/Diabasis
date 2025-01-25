@@ -157,3 +157,53 @@
 	margin-top:0;
 	font-size:12px;
 }
+
+@media (max-width: 1024px) {
+    #front{
+		display: flex;
+		flex-direction: column;
+		margin:10px 10%;
+		gap: 50px;
+	}
+
+    #diabaicon {
+        margin: 10% auto; /* Centrer sur les petits écrans */
+    }
+
+    #intro2 {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #works {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    #works div {
+        width: 50%;
+		height:100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #presentation2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #diabaicon {
+        height: 200px;
+    }
+
+    #flowerbg {
+        opacity: 0.7; /* Plus visible sur petits écrans */
+    }
+
+    #works div {
+        width: 80%; /* Réduit les cadres des projets */
+        padding: 10px;
+    }
+}

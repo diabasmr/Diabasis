@@ -160,7 +160,6 @@ nav a:active{
 }
 
 #side-footer{
-	width:30%;
 	text-align: center;
 	background: #333;
 	color:#fff;
@@ -189,11 +188,16 @@ nav a:active{
 
 	nav {
         width: 100%;
-        height: auto;
+        height: 100%;
 		display:none;
         border-radius: 0;
 		/*modifier et mettre le text en haut*/
     }
+
+	nav li{
+		margin-bottom: 15%;
+		font-size: clamp(1.2rem, 2vw, 1rem);
+	}
 	
 	nav.open{
 		display: flex;
