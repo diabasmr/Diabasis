@@ -16,15 +16,9 @@ document.addEventListener("click", (event) => {
 const present= document.getElementById(`intro`)
 
 
-document.addEventListener("mousemove", (event) => {
-    const middleY = window.innerHeight / 2; // Position verticale du milieu de l'écran
-
-const margin = 50; // Une marge autour du centre (ajustez selon vos besoins)
-
-    // Vérifier si la souris est au centre (avec une tolérance définie par "margin")
-if (
-    event.clientY > middleY - margin && event.clientY < middleY + margin
-    ) {
-        present.classList.add("show");
-    }
-});
+window.addEventListener("load", () => {
+    // Déclenche l'action après 1.5 secondes
+    setTimeout(() => {
+      present.classList.add("show"); // Ajoute la classe "show"
+    }, 1500); // 1500 ms = 1.5 secondes
+  });
