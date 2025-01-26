@@ -152,7 +152,7 @@
 #works div:hover{
 	height: 500px;          /* Hauteur des cadres */
 	transition: height 0.3s ease-in-out;
-  }
+}
 
 #works h3{
 	margin:0 auto;
