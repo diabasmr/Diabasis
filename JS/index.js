@@ -17,8 +17,28 @@ const present= document.getElementById(`intro`)
 
 
 window.addEventListener("load", () => {
-    // Déclenche l'action après 1.5 secondes
+    // Déclenche l'action après 0.5 secondes
     setTimeout(() => {
       present.classList.add("show"); // Ajoute la classe "show"
-    }, 1500); // 1500 ms = 1.5 secondes
+    }, 500); // 500 ms = 0.5 secondes
   });
+
+// Sélectionne le bouton
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+// Affiche ou cache le bouton selon la position du scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+// Scroll jusqu'en haut quand on clique sur le bouton
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Animation fluide
+  });
+});
