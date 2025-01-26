@@ -131,4 +131,23 @@
 		font-size: 1rem;
 		margin: 20px auto;
 	}
+	.poche {
+		height: 15rem;
+	}
+	
+	.poche-en {
+		height: 16rem;
+	}
+	
+	.broche {
+		height: 18rem;
+	}
+	
+	.relie {
+		height: 20rem;
+	}
+	
+	.artbook {
+		height: 25rem;
+	}
 }
