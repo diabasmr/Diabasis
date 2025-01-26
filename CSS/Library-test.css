@@ -116,7 +116,7 @@
 	width: 90%;
 }
 
-@media(max-width:600px){
+@media(max-width:900px){
 	#progressbar {
 		width: 8rem;
 	}
@@ -128,6 +128,7 @@
 	
 	.reminder {
 		width: 70%;
+		font-size: 1rem;
 		margin: 20px auto;
 	}
 }
