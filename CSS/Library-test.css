@@ -200,6 +200,7 @@
 		left: calc(100% + 140px);
 		font-size: 10px;
 		width: 15rem;
+		min-height: 10rem;
 	}
 	
 	.review p, .review h2, .review small{
