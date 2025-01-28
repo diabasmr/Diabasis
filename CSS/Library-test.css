@@ -197,6 +197,12 @@
 	}
 
 	.review {
+		left: calc(100% + 140px);
 		font-size: 10px;
+		width: 15rem;
+	}
+	
+	.review p, .review h2, .review small{
+		width:90%;
 	}
 }
