@@ -193,12 +193,12 @@
 	}
 
 	.review h2 {
-		font-size: 15px;
+		font-size: 20px;
 	}
 
 	.review {
 		left: calc(100% + 140px);
-		font-size: 10px;
+		font-size: 17px;
 		width: 15rem;
 		min-height: 10rem;
 	}
