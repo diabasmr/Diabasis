@@ -206,12 +206,4 @@
 	.review p, .review h2, .review small{
 		width:90%;
 	}
-
-	.livre img:hover + .review {
-		display: none; /* Affiche l'encadré lors du hover */
-	}
-
-	.livre img:active + .review {
-		display: block; /* Affiche l'encadré lors du hover */
-	}/*CSS à ajouter hein*/
 }
