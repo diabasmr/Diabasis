@@ -15,7 +15,6 @@ document.addEventListener("click", (event) => {
 
 const present= document.getElementById(`intro`)
 
-
 window.addEventListener("load", () => {
     // Déclenche l'action après 0.5 secondes
     setTimeout(() => {
