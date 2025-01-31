@@ -112,10 +112,6 @@
 .livre{
 	position: relative;
 }
-  
-.livre img:hover + .review {
-	display: block; /* Affiche l'encadré lors du hover */
-}
 
 .livre img{
 	margin: 0;
