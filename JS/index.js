@@ -41,3 +41,21 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth' // Animation fluide
   });
 });
+
+//CLIC REVIEW
+//sélectionne tous les articles
+const livres = document.querySelectorAll('.livre');
+
+livres.forEach(function(livre) {
+    const image = livre.querySelector('img'); // image de chaque livre
+    const review = livre.querySelector('.review'); // review correspondante
+
+    // Clic sur l'image pour afficher/masquer la review
+    image.addEventListener('click', function() {
+        if (review.style.display === 'none' || review.style.display === '') {
+            review.style.display = 'block'; // Affiche la review
+        } else {
+            review.style.display = 'none'; // Cache la review
+        }
+    });
+});
