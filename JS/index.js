@@ -52,13 +52,12 @@ livres.forEach(function(livre) {
 
     // Clic sur l'image pour afficher/masquer la review
     image.addEventListener('click', function() {
-       // Masque toutes les reviews
-       const allReviews = document.querySelectorAll('.review');
-       allReviews.forEach(function(r) {
-           r.style.display = 'none';
-       });
+        // Masque toutes les reviews sauf celle cliquée
+        document.querySelectorAll('.review').forEach(r => {
+            if (r !== review) r.classList.remove('visible');
+        });
 
-       // Affiche la review du livre cliqué
-       review.style.display = 'block';
+        // Toggle l'affichage de la review du livre cliqué
+        review.classList.toggle('visible');
     });
 });
