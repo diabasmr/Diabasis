@@ -100,9 +100,13 @@
 	font-size: 20px;
 	width: 40rem;
 	height: auto;
-	min-height:40rem;
+	min-height:15rem;
 	display: none; /* Cache l'encadré au début */
 	z-index: 4; /* Toujours au-dessus sauf du livre hover */
+}
+
+.review.visible {
+    display: block;
 }
 
 .review p, .review h2, .review small{
