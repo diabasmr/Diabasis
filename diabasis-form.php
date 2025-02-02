@@ -42,14 +42,14 @@
 		<input class="btn" type="submit" name="submit" value="COMMIT">
 
     <?php
-$file = "mails_envoyes.txt";  
-$mail_content = "To: $to\nSubject: $subject\nHeaders: $headers\nMessage: $message\n\n";  
-file_put_contents($file, $mail_content, FILE_APPEND);  
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 $message = htmlspecialchars($_POST["message"]);
 $gender = htmlspecialchars($_POST["gender"]);
+
+$file = "mails_envoyes.txt";  
+$mail_content = "To: $to\nSubject: $subject\nHeaders: $headers\nMessage: $message\n\n";  
+file_put_contents($file, $mail_content, FILE_APPEND);  
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $to = "diabasamoura@gmail.com";
