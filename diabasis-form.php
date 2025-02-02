@@ -50,8 +50,8 @@ $gender = htmlspecialchars($_POST["gender"]);
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $to = "diaba.samoura@hotmail.com";
     $subject = "Diabasis Newsletter";
-    $headers = "From: $email\\r\\n" .
-               "Reply-To: $email\\r\\n" .
+    $headers = "From: $email\r\n" .
+               "Reply-To: $email\r\n" .
                "Content-Type: text/plain; charset=UTF-8";
 
     $body = "Email: $email\n";
