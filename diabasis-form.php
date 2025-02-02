@@ -48,7 +48,7 @@ $message = htmlspecialchars($_POST["message"]);
 $gender = htmlspecialchars($_POST["gender"]);
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $to = "diabasamoura@gmail.com";
+    $to = "di369B.girlie@gmail.com";
     $subject = "Diabasis Newsletter";
     $headers = "From: $email \r\n" .
                "Reply-To: $email \r\n" .
