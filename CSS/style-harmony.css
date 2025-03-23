@@ -20,6 +20,20 @@ body{
 	margin:0;
 }
 
+.title{
+	font-family: Art-nuvo;
+	text-align: center;
+	color:#db7c84;
+	font-size: 3rem;
+	font-weight: bolder;
+}
+
+.factsSubTitle {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bolder;
+	margin-left: 7%;
+}
+
 /*LIENS*/
 a{
 	text-decoration: none;
@@ -46,6 +60,17 @@ a:active{
 a:focus {
     outline: 2px dashed #db7c84;
     outline-offset: 4px;
+}
+
+/*FIL DARIANE*/
+.fildAriane{
+	margin-left: 5%;
+}
+.fildAriane a{
+	color: black;
+}
+.fildAriane a:hover{
+	color: pink;
 }
 
 /*CLEAR*/
