@@ -1,0 +1,138 @@
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    margin-left: 7%;
+}
+
+.people {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 300px;
+    /* Ajuste selon tes besoins */
+    position: relative;
+}
+
+.people img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.8s;
+    position: relative;
+    /* Changer absolute en relative */
+    margin-right: -30%;
+    /* Chevauchement entre les images */
+}
+
+/* Ajuster le premier élément pour éviter qu'il ne parte trop à gauche */
+.people img:first-child {
+    margin-left: 0;
+}
+
+/* Effet au survol : l’image passe devant les autres */
+.people img:hover {
+    transform: rotateY(80deg);
+    z-index: 10;
+    /* Ramène l'image en avant */
+}
+
+.peopleArticle.visible {
+    display: flex;
+}
+
+.peopleArticle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.peopleArticle h3 {
+    text-decoration: underline;
+}
+
+.peopleArticle div {
+    width: 80%;
+    margin-top: 50px;
+}
+
+#headlaurynn {
+    width: 50%;
+}
+
+/*SLIDER*/
+.slider h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+    object-fit: contain;
+    height: auto;
+}
+
+.slider img.displaySlide {
+    display: block;
+    animation-name: turnPage;
+    animation-duration: 2s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    padding: 3px 10px;
+    background-color: rgb(197, 75, 96);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    z-index: 10;
+}
+
+.slider button:hover {
+    background-color: brown;
+}
+
+.slider .prev {
+    left: 10px;
+    font-family: Playfair-display;
+}
+
+.slider .next {
+    right: 10px;
+    font-family: Playfair-display;
+}
+
+@keyframes turnPage {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(-360deg);
+    }
+
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
