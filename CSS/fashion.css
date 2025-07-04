@@ -1,4 +1,4 @@
-.card {
+.carde {
     position: fixed;
     top: 0;
     left: 0;
@@ -108,7 +108,7 @@
     gap: 1em;
 }
 
-.row {
+.row0 {
     flex: 1;
     background-color: #aab687;
     border: 2px solid #aab687;
