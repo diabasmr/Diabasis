@@ -194,3 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function openFullscreen(media) {
+  if (media.requestFullscreen) {
+    media.requestFullscreen();
+  } else if (media.webkitRequestFullscreen) { // Safari
+    media.webkitRequestFullscreen();
+  } else if (media.msRequestFullscreen) { // IE/Edge
+    media.msRequestFullscreen();
+  }
+}
