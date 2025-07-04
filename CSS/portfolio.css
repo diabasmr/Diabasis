@@ -1,178 +1,98 @@
-/*LANDING PAGE*/
-#landingPage {
-    position: relative; /* Permet de positionner les éléments enfants */
-    overflow: visible;   
+
+/*HOVER INFO*/
+.disabled-link {
+  cursor: default;
+  opacity: 0.6;
 }
 
-#treebg {
-    position: absolute; /* Permet de positionner l'image par rapport à la section */
+.project-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    width:100%;
+    height: 100%;
+}
+
+.project-card .overlay {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Adapte l'image à la largeur du conteneur */
-    height: auto; /* Garde le ratio de l'image */
-    z-index: -1; /* Place l'image derrière le contenu */
-    opacity: 0.7; /* Rend l'image légèrement transparente */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* voile noir */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
-/*Presentation perso*/
-#presentation2{
-	display:flex;
-	margin-bottom: 50px;
-	z-index:2;
-	position: relative; /* Assure que le contenu est au-dessus de l'image */
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+.project-card:hover img {
+    transform: scale(1.05); /* zoom léger */
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem;
 }
 
 
-#diabaicon{
-	height:400px;
-	margin: 10% 0 12.5% 40%;
+/* DISPOSITION BENTO*/
+.highlight {
+    color: #db7c84;
 }
 
-#intro2{
-	bottom: 10%;
-    left: 50%;
-	margin:200px 10px 200px 1.3em;
-	padding:0 30px;
-	box-sizing:border-box;
-	transition: opacity 0.3s ease-in-out; /* Transition fluide */
+.project-img,
+.project-video {
+    transition: transform 0.5s ease;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(185, 131, 255, 0.2);
+    cursor: pointer;
 }
 
-#intro2 h1{
-	font-family:Art-nuvo;
-    font-size: 60px;
+.section-title {
+    font-weight: 600;
+    font-size: 2rem;
 }
 
-#intro2 strong{
-	color:#6e6d6d;
+.back-link {
+    color: #db7c84;
+    text-decoration: none;
 }
 
-/*COMPETENCES*/
-#competences {
-    position: relative; /* Permet de positionner les éléments enfants */
-    overflow: visible;   /* Assure que rien ne déborde */
-	margin-top:100px;
+.back-link:hover {
+    text-decoration: underline;
 }
 
-#flowerbg {
-    position: absolute; /* Permet de positionner l'image par rapport à la section */
-    top: 0;
-    left: 0;
-    width: 100%; /* Adapte l'image à la largeur du conteneur */
-    height: auto; /* Garde le ratio de l'image */
-    z-index: -1; /* Place l'image derrière le contenu */
-    opacity: 0.5; /* Rend l'image légèrement transparente */
-}
-
-#skills, #tools, #education, #works{
-	font-size:20px;
-	z-index:2;
-	position: relative; /* Assure que le contenu est au-dessus de l'image */
-    z-index: 1; /* Place le contenu au-dessus de l'image */
-}
-
-#front{
-	display: grid; /*active la grille*/
-	margin:10px 10%;
-	gap: 50px;
-  	grid-template-columns: 50% 40%; /* 2 colonnes : 1 part x4 */
-  	grid-template-rows: 300px auto; /* 2 lignes : 300px de hauteur, une ligne flexible */
-}
-
-#skills {
-	grid-column: 1 / 2; /* Occupe de la colonne 1 à 2 */
-	grid-row: 1 / 2;    /* Occupe la ligne 1 */
-}
-
-#skills li{
-	line-height: 45px;
-	display: inline;
-	margin: 30px 50px;
-}
-
-#tools {
-	grid-column: 1 / 2; /* Occupe de la colonne 1 à 3 */
-	grid-row: 2 / 2;    /* Occupe la ligne 1 */
-}
-
-#tools li{
-	list-style: none;
-	line-height: 45px;
-	color:#030701;
-}
-
-#education {
-	font-weight: bold;
-	grid-column: 2 / 2; /* Occupe de la colonne 1 à 3 */
-	grid-row: 2 / 2;    /* Occupe la ligne 1 */
-}
-
-/*PROJETS*/
-#title-w{
-	text-align: center;
-	margin-top:10%;
-}
-#works{
-	display:flex;
-	justify-content: space-around;
-}
-
-#works div{
-  border: 3px solid pink; /* Cadre rose de 3 pixels */
-  border-radius:15px;
-  box-shadow: 10px 20px #333;
-  background-color: pink;
-  width: 30%;           /* Largeur des cadres */
-  height: 290px;          /* Hauteur des cadres */
-  margin-top: 30px;
-  display: inline-block;  /* Pour que les cadres s'affichent en ligne */
-  overflow: hidden; /* Assure que rien ne déborde */
-  text-align: center;
-}
-
-#works img{
-	width: 95%;
-	border-radius: 30px;
-	margin:10px 5px 0 5px; /*A MODIFIER POUR CENTRER EXACTEMENT PARCE QUE PAS LE TEMPS*/
-}
-
-#works #memories{
-	margin-top: 25px;
-}
-
-#works a{
-	color:#123108;
-	text-decoration: none;
-}
-
-#works a:hover{
-	color:#db7c84;
-}
-
-#works div:hover{
-	height: 500px;          /* Hauteur des cadres */
-	transition: height 0.3s ease-in-out;
-}
-
-#works h3{
-	margin:0 auto;
-}
-
-#works p{
-	margin-top:0;
-	font-size:12px;
+video {
+    width: 100%;
 }
 
 @media (max-width: 1024px) {
-    #front{
-		display: flex;
-		flex-direction: column;
-		margin:10px 10%;
-		gap: 50px;
-	}
+    #front {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10%;
+        gap: 50px;
+    }
 
     #diabaicon {
-        margin: 10% auto; /* Centrer sur les petits écrans */
+        margin: 10% auto;
+        /* Centrer sur les petits écrans */
     }
 
     #intro2 {
@@ -188,7 +108,7 @@
 
     #works div {
         width: 50%;
-		height:100%;
+        height: 100%;
     }
 }
 
@@ -204,11 +124,7 @@
     }
 
     #flowerbg {
-        opacity: 0.7; /* Plus visible sur petits écrans */
-    }
-
-    #works div {
-        width: 80%; /* Réduit les cadres des projets */
-        padding: 10px;
+        opacity: 0.7;
+        /* Plus visible sur petits écrans */
     }
 }
