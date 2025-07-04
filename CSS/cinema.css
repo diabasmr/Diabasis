@@ -70,7 +70,7 @@
 }
   
 
-.card {
+.carde {
     background-color: rgb(253, 249, 243);
     display: flex;
     align-items: center;
@@ -83,15 +83,15 @@
     margin-left: 5%;
 }
 
-.card img {
+.carde img {
     width: 20%;
 }
 
-.card:hover {
+.carde:hover {
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.card p {
+.carde p {
     padding: 2px 16px;
     font-size: 40px;
 }
@@ -107,7 +107,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    .card {
+    .carde {
         border-radius: 15px;
         padding: 10px;
         width: 85%;
