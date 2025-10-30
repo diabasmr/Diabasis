@@ -141,25 +141,54 @@
       </div>
     </div>
 
-    <!--  Section principale -->
-    <div class="row me-2 align-items-center mt-5">
-      <div class="col-12 col-md-5">
+    <!-- Section principale -->
+    <div class="row align-items-center mt-5 position-relative flex-nowrap">
+      <!-- Image de fond -->
+      <div class="col-12 col-md-5 position-relative">
         <img
           src="../pictures/tree-background.png"
           alt="dessin arbre en arrière plan: Mia et le migou"
-          style="width: 100%; height: auto"
+          class="img-fluid"
+          style="width: 100%; height: auto; position: relative; z-index: 1"
         />
+
+        <!-- Vidéo par-dessus -->
+        <video id="cv"
+          class="project-video position-absolute top-50 start-50 translate-middle"
+          controls
+          autoplay
+          playsinline
+          onclick="openFullscreen(this)"
+          style="
+            margin-left: 30%;
+            width: 80%;
+            height: auto;
+            z-index: 2;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+          "
+        >
+          <source
+            src="../pictures/portfolio/pro/Diaba Samoura CV Video.mp4"
+            type="video/mp4"
+          />
+          Your browser doesn't support video playback.
+        </video>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("cv");
+            if (video) {
+              video.volume = 0.1; // 30% du volume
+            }
+          });
+        </script>
       </div>
-      <div class="col-5 col-md-2 text-center">
-        <img
-          src="../pictures/diabasis-greet.webp"
-          alt="greet photo"
-          style="width: 100%; height: auto"
-        />
-      </div>
-      <div class="col-6 col-md-5">
+
+      <div class="col-md-1"></div>
+      <!-- Texte -->
+      <div class="col-12 col-md-6 text-center text-md-start ms-2 pe-3">
         <h1>DIABA SAMOURA</h1>
-        <h2>FULL STACK DEVELOPPER</h2>
+        <h2>FULL STACK DEVELOPER</h2>
         <h3>(Paris, France) (UX/UI DESIGN)</h3>
         <p>
           Student in MMI. I'm a creative and passionate fashionista who loves to
@@ -167,21 +196,25 @@
           cybersecurity specialist.
         </p>
         <p>
-          <strong
-            >Currently looking for a 3-month internship in web development —
-            ideally in England — to make my dream of working in london come true
-            ✈️</strong
-          >
+          <strong>
+            Currently looking for a 3-month internship in web development —
+            ideally in England — to make my dream of working in London come true
+            ✈️
+          </strong>
         </p>
-        
+
         <!-- Boutons -->
-        <div class="d-flex gap-3 float-end">
+        <div
+          class="d-flex gap-3 justify-content-md-start justify-content-center"
+        >
+        upload
           <a
-            href="https://github.com/diabasmr/sitemmimeaux.git"
+            href="../pictures/portfolio/pro/CV Diaba Samoura.pdf" download
             target="_blank"
             class="btn btn-outline-dark"
-            >🪪 Download my CV</a
           >
+            🪪 Download my CV
+          </a>
         </div>
       </div>
     </div>
@@ -192,12 +225,11 @@
       <h2 class="row highlight my-3">👀 My projects</h2>
 
       <div class="row mb-3">
-        <!-- Image 1 -->
+        <!-- DIABASIS -->
         <div class="col-4 col-md-2">
           <a
-            href="diabasis.html"
-            class="project-card disabled-link"
-            onclick="return false;"
+            href="../index.html"
+            class="project-card"
           >
             <img
               src="../pictures/portfolio/diabasis-mockup.png"
@@ -212,7 +244,7 @@
           </a>
         </div>
 
-        <!-- Image 2 -->
+        <!-- SPEAKLENS -->
         <div class="col-8 col-md-4">
           <a href="speaklens.html" class="project-card">
             <img
@@ -228,7 +260,7 @@
           </a>
         </div>
 
-        <!-- Image 3 -->
+        <!-- FALL DIARIES -->
         <div class="col-6 mt-3 mt-md-0 col-md-2">
           <a href="falldiaries.html" class="project-card">
             <img
@@ -244,7 +276,7 @@
           </a>
         </div>
 
-        <!-- Image 4 -->
+        <!-- REZOOM -->
         <div class="col-6 mt-3 mt-md-0 col-md-4">
           <a href="rezoom.html" class="project-card">
             <img
@@ -262,15 +294,14 @@
       </div>
 
       <div class="row mb-3">
-        <!-- Image 5 -->
+        <!-- MEMORIES -->
         <div class="col-4 col-md-2">
           <a
-            href="memories.html"
-            class="project-card disabled-link"
-            onclick="return false;"
+            href="https://colab.research.google.com/drive/1nZgH8xYrI4NGdJMTRZ1E8iFE3nDbISpd#scrollTo=JzwZB3ReQQ7M"
+            class="project-card" target="_blank"
           >
             <img
-              src="../pictures/portfolio/Di-icon.png"
+              src="../pictures/jeu_memories.png"
               alt="Jeu memories"
               class="img-fluid project-img rounded shadow"
             />
@@ -282,7 +313,7 @@
           </a>
         </div>
 
-        <!-- Image 6 -->
+        <!-- NH SKILLS -->
         <div class="col-8 col-md-4">
           <a
             href="nhskills.html"
@@ -301,8 +332,9 @@
             </div>
           </a>
         </div>
+        <!--WORK IN PROGRESS-->
 
-        <!-- Image 7 -->
+        <!-- SENDTO -->
         <div class="col-8 mt-3 mt-md-0 col-md-3">
           <a
             href="sendto.html"
@@ -322,7 +354,7 @@
           </a>
         </div>
 
-        <!-- Image 8 -->
+        <!-- WEBDOCUMENTARY -->
         <div class="col-4 mt-3 mt-md-0 col-md-3">
           <a
             href="webdoc.html"
@@ -344,7 +376,7 @@
       </div>
 
       <div class="row">
-        <!-- Image 9 -->
+        <!-- Hackathon -->
         <div class="col-4 col-md-3">
           <a
             href="hackathon.html"
@@ -364,7 +396,7 @@
           </a>
         </div>
 
-        <!-- Image 10 -->
+        <!-- ACESBLY 
         <div class="col-8 col-md-3">
           <a
             href="acesbly.html"
@@ -383,8 +415,9 @@
             </div>
           </a>
         </div>
+        -->
 
-        <!-- Image 11 -->
+        <!-- CORNELIO -->
         <div class="col-6 mt-3 mt-md-0 col-md-3">
           <a href="cornelio.html" class="project-card">
             <img
@@ -400,7 +433,7 @@
           </a>
         </div>
 
-        <!-- Image 12 -->
+        <!-- VOYASIA -->
         <div class="col-6 mt-3 mt-md-0 col-md-3">
           <a href="voyasia.html" class="project-card">
             <img
@@ -428,9 +461,15 @@
             <i class="fa-brands fa-python fa-3x" title="Python"></i>
             <i class="fa-brands fa-html5 fa-3x" title="HTML"></i>
             <i class="fa-brands fa-css3-alt fa-3x" title="CSS"></i>
+            <i class="fa-brands fa-sass fa-3x" title="SCSS"></i><!--iCON-->
+            <i class="fa-brands fa-bootstrap fa-3x" title="Bootstrap"></i>
             <i class="fa-brands fa-js fa-3x" title="JavaScript"></i>
+            <i class="fa-brands fa-chartjs fa-3x" title="Typescript"></i><!--iCON-->
+            <i class="fa-brands fa-chartjs fa-3x" title="Chart.js"></i><!--iCON-->
             <i class="fa-solid fa-database fa-3x" title="SQL"></i>
             <i class="fa-brands fa-php fa-3x" title="PHP"></i>
+            <i class="fa-brands fa-java fa-3x" title="JAVA"></i>
+            <i class="fa-brands fa-angular fa-3x" title="Angular"></i>
             <i class="fa-brands fa-github fa-3x" title="GitHub"></i>
             <i class="fa-brands fa-linux fa-3x" title="Linux"></i>
           </div>
@@ -442,10 +481,11 @@
           <ul class="list-unstyled">
             <li>UX/UI Design</li>
             <li>Figma / Figjam</li>
+            <li>Trello</li>
             <li>WordPress</li>
             <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
             <li>
-              Audiovisual production (Adobe Premiere Pro + professional
+              Audiovisual production (Adobe Premiere Pro + After Effects+ professional
               equipment)
             </li>
           </ul>
@@ -545,10 +585,9 @@
 </html>
 <!--
 AJOUTER
-option télécharger la charte graphique/le CV
-dans le menu lien page contact
-le cv téléchargeable dans le about me
-faire les projets manquants (implement 'em & present 'em)
-le cv vidéo après le tournage
+option télécharger la charte graphique falldiairies(retrouve le doc) - nh skills (demande autorisation) - speaklens (à voir)
+dans le menu lien page contact (mini formulaire de contact+adresses)
+faire les projets manquants (implement 'em & present 'em) -CornelioEN - Diabasis -NHskills - Hackathon - Acesbly - Memories - Sendto - Webdocumentary
+ajouter les icones manquantes (bootstrap, chart.js, typescript)
 l'inclusion de la nav portfolio dans chaques présenattions projets
 -->
