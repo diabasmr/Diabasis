@@ -1,166 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiyomi — Diaba S.</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/db9b6937ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/style-harmony.css" />
+    <link rel="shortcut icon" href="../pictures/Di-icon.ico" />
+    <script src="../JS/index.js" defer></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kiyomi — Diaba S.</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/db9b6937ac.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css">
-  <link rel="stylesheet" type="text/css" href="../CSS/style-harmony.css">
-  <link rel="shortcut icon" href="../pictures/Di-icon.ico" />
-  <script src="../JS/index.js" defer></script>
-</head>
+    <style>
+      .background-image {
+        background-image: url("../pictures/flowers-background.png");
+        background-repeat: repeat;
+        background-size: contain;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+    </style>
+  </head>
 
-<body>
-  <button id="scrollTopBtn" class="btn" style="display: none;">TOP</button>
-  <div id="include-Dnav"></div>
+  <body>
+    <button id="scrollTopBtn" class="btn" style="display: none">TOP</button>
+    <div id="include-Dnav"></div>
 
-  <!-- Image de fond -->
+    <!-- Image de fond -->
     <div class="background-image"></div>
 
     <!--navPortfolio-->
     <div id="include-navp"></div>
 
-  <div class="container-md py-5">
-    <h1 class="section-title mt-5 mb-4">Kiyomi — L'art culinaire japonais contemporain</h1>
+    <div class="container-md py-5">
+      <h1 class="section-title mt-5 mb-4">
+        Kiyomi — L'art culinaire japonais contemporain
+      </h1>
 
-    <!-- Bento Grid -->
-    <h4 class="row highlight my-5">👀 Aperçus du projet</h4>
-    <div class="row mb-5">
-      <!-- Vidéo -->
-      <div class="col-12 col-md-6 mb-3 mb-md-0">
-        <video class="project-video" autoplay loop muted playsinline onclick="openFullscreen(this)">
-          <source src="../pictures/portfolio/KIYOMI/DemoKiyomi.mp4" type="video/mp4">
-          Ton navigateur ne supporte pas la lecture vidéo.
-        </video>
-      </div>
-      <!-- Image 1 -->
-      <div class="col-12 col-md-6">
-        <div class="row mb-3">
-          <div class="col-5">
-            <img src="../pictures/portfolio/KIYOMI/logo_mockups_boite_resto.png" alt="Screenshot 1" class="project-img"
-              onclick="openFullscreen(this)">
+      <!-- Bento Grid -->
+      <h4 class="row highlight my-5">👀 Aperçus du projet</h4>
+      <div class="row mb-5">
+        <!-- Vidéo -->
+        <div class="col-6 mb-3 mb-md-0">
+          <div class="row">
+            <div style="padding: 50.42% 0 0 0; position: relative">
+              <iframe
+                src="https://player.vimeo.com/video/1146655188?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                class="project-video"
+                title="DemoKiyomi"
+              ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
-          <!-- Stack + rôles -->
-          <div class="col-7">
-            <div class="ms-2 row">
-              <h4 class="highlight">🛠️ Technologies et outils utilisées</h4>
-              <ul>
-                <li>Angular (TypeScript, Scss)</li>
-                <li>API (SQL, PHP)</li>
-                <li>Illustrator, Photoshop & Gemini (photo des produits)</li>
-                <li>Figma (Maquettes et Prototypage)</li>
-              </ul>
+          <!-- Équipe -->
+          <div class="row mt-4">
+            <h4 class="highlight mb-4">L’équipe</h4>
+
+            <div class="col-6 col-md-4 mb-3 text-center">
+              <a
+                href="../index.html"
+                class="btn btn-outline-danger w-75"
+                >Diaba Samoura</a
+              >
+            </div>
+
+            <div class="col-6 col-md-4 mb-3 text-center">
+              <a
+                href="https://portfolio-laura.alwaysdata.net" target="_blank"
+                class="btn btn-outline-danger w-75"
+                >Laura Lebreton</a
+              >
+            </div>
+
+            <div class="col-6 col-md-4 mb-3 text-center">
+              <a
+                href="../portfolio/amel.html" target="_blank"
+                class="btn btn-outline-danger w-75"
+                >Amel Gilet</a
+              >
+            </div>
+
+            <div class="col-6 mb-3 text-center">
+              <a
+                href="../portfolio/nelly.html" target="_blank"
+                class="btn btn-outline-danger w-75"
+                >Nelly-Grâce Luyeye-Polydor</a
+              >
+            </div>
+
+            <div class="col-6 mb-3 text-center">
+              <a
+                href="../portfolio/sefora.html" target="_blank"
+                class="btn btn-outline-danger w-75"
+                >Séfora Admi</a
+              >
             </div>
           </div>
         </div>
+
+        <!-- Image 1 -->
+        <div class="col-12 col-md-6">
+          <div class="row mb-3">
+            <div class="col-5">
+              <img
+                src="../pictures/KIYOMI/logo_mockups_boite_resto.png"
+                alt="Screenshot 1"
+                class="project-img"
+                onclick="openFullscreen(this)"
+              />
+            </div>
+            <!-- Stack + rôles -->
+            <div class="col-7">
+              <div class="ms-2 row">
+                <h4 class="highlight">🛠️ Technologies et outils utilisées</h4>
+                <ul>
+                  <li>Angular (TypeScript, SCSS)</li>
+                  <li>API (SQL, PHP)</li>
+                  <li>Trello & modèles MCD</li>
+                  <li>Figma (maquettes et prototypage)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Image 3 -->
+            <div class="col-6">
+              <img
+                src="../pictures/KIYOMI/Gemini_Generated_Image_mwazvcmwazvcmwaz.png"
+                alt="Screenshot 2"
+                class="project-img"
+                onclick="openFullscreen(this)"
+              />
+            </div>
+            <!-- Image 2 -->
+            <div class="col-6">
+              <img
+                src="../pictures/KIYOMI/chef_accueil.png"
+                alt="Screenshot 2"
+                class="project-img"
+                onclick="openFullscreen(this)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- image principale -->
+      <div class="row my-5">
+        <div class="col-12 col-md-5">
+          <img
+            src="../pictures/KIYOMI/logo_mockup.webp"
+            alt="Capture principale"
+            class="img-fluid project-img mb-5"
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="col-12 col-md-7 mb-5">
+          <p>
+            Kiyomi est un projet de groupe mené à cinq dans le cadre d’une SAE
+            en première année de BUT MMI. J’y occupais le rôle de
+            <span class="highlight">cheffe de projet</span>, en assurant
+            l’organisation, la coordination de l’équipe et le suivi global du
+            développement.
+          </p>
+
+          <p>
+            Le projet repose sur la création d’un restaurant japonais
+            contemporain avec une identité visuelle forte et une expérience
+            utilisateur soignée. Il est toujours en cours de développement.
+          </p>
+
+          <p>
+            Une première version de la maquette avait été réalisée, mais elle ne
+            répondait pas pleinement aux besoins du projet. J’ai donc repris
+            l’ensemble du design, ce qui m’a permis d’approfondir ma maîtrise de
+            Figma et des principes UX/UI.
+          </p>
+
+          <p>
+            Nous apprenons progressivement Angular, TypeScript et la mise en
+            place d’API avec SQL, en avançant directement par la pratique.
+          </p>
+
+          <h5 class="highlight mb-3">Points clés du projet</h5>
+          <ul>
+            <li>Gestion de projet et organisation via Trello</li>
+            <li>Conception technique appuyée par des modèles MCD</li>
+            <li>Refonte complète de la maquette UX/UI</li>
+            <li>
+              Développement front-end et back-end en apprentissage progressif
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
         <div class="row">
-          <!-- Image 3 -->
-          <div class="col-6">
-            <img src="../pictures/portfolio/KIYOMI/Gemini_Generated_Image_mwazvcmwazvcmwaz.png" alt="Screenshot 2" class="project-img"
-              onclick="openFullscreen(this)">
+          <!-- Bloc Contacts -->
+          <div class="col-md-6 mb-3">
+            <h5 class="text-uppercase">Contacts</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="https://github.com/diabasmr"
+                  class="text-white text-decoration-none"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-github me-2"></i>Github
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:diaba.samoura@gmail.com"
+                  class="text-white text-decoration-none"
+                >
+                  <i class="fa-solid fa-envelope me-2"></i
+                  >diaba.samoura@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/diaba-samoura/"
+                  class="text-white text-decoration-none"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin me-2"></i>LinkedIn
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- Image 2 -->
-          <div class="col-6">
-            <img src="../pictures/portfolio/KIYOMI/chef_accueil.png" alt="Screenshot 2" class="project-img"
-              onclick="openFullscreen(this)">
+
+          <!-- Bloc Legal -->
+          <div class="col-md-6 mb-3">
+            <h5 class="text-uppercase">Mentions légales</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="../HTML/mentions-legales.html"
+                  class="text-white text-decoration-none"
+                  >Mentions Légales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../HTML/a-propos.html"
+                  class="text-white text-decoration-none"
+                  >À propos</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
 
-        <!-- image principale -->
-    <div class="row my-5">
-      <div class="col-12 col-md-5">
-        <img src="../pictures/portfolio/KIYOMI/logo_mockup.webp" alt="Capture principale"
-          class="img-fluid project-img mb-5">
-      </div>
-
-
-      <!-- Description -->
-      <div class="col-12 col-md-7 mb-5">
-        <p>
-          Ce projet de groupe, réalisé dans le cadre de ma SAE de fin de semestre en première année de BUT MMI,
-          consistait à réinventer un objet du quotidien en développant un concept innovant, une stratégie de marque forte et une
-          présence digitale impactante.
-        </p>
-        </p>
-        <p>
-          C’est ainsi qu’est né <span class="highlight">SpeakLens</span> : des lunettes traductrices pensées pour les
-          touristes, étudiants et professionnels en déplacement.
-          Des lunettes de vue ou de soleil capables d’afficher la traduction directement sur les verres, tout en restant
-          stylées et pratiques.
-        </p>
-        <p>J’ai pris en charge la conception complète du site vitrine sous WordPress. Malgré mes réticences initiales
-          avec le CMS, j’ai su tirer parti des extensions avancées pour structurer et
-          enrichir le site.
-          Je suis fière du résultat obtenu, tant sur le plan fonctionnel que graphique.</p>
-        <h5 class="highlight mb-3">Points clés du projet</h5>
-        <ul>
-          <li>Espace de commande clair et pensé pour une cible internationale</li>
-          <li>Présentation détaillée du système de traduction innovant</li>
-          <li>Section dédiée à l’univers de la marque : conférences, démonstrations, articles…</li>
-          <li>Identité visuelle forte, logo et visuels inspirés des codes de Meta et Google</li>
-        </ul>
-        <p>
-          Ce projet m’a permis de découvrir les possibilités avancées de WordPress, ainsi que l’importance du branding
-          dans un projet digital.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container">
-      <div class="row">
-        <!-- Bloc Contacts -->
-        <div class="col-md-6 mb-3">
-          <h5 class="text-uppercase">Contacts</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://github.com/diabasmr" class="text-white text-decoration-none" target="_blank">
-                <i class="fa-brands fa-github me-2"></i>Github
-              </a>
-            </li>
-            <li>
-              <a href="mailto:diaba.samoura@gmail.com" class="text-white text-decoration-none">
-                <i class="fa-solid fa-envelope me-2"></i>diaba.samoura@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/diaba-samoura/" class="text-white text-decoration-none"
-                target="_blank">
-                <i class="fa-brands fa-linkedin me-2"></i>LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Bloc Legal -->
-        <div class="col-md-6 mb-3">
-          <h5 class="text-uppercase">Mentions légales</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../HTML/mentions-legales.html" class="text-white text-decoration-none">Mentions Légales</a>
-            </li>
-            <li>
-              <a href="../HTML/a-propos.html" class="text-white text-decoration-none">À propos</a>
-            </li>
-          </ul>
+        <!-- Footer bottom -->
+        <div class="text-center pt-3 border-top border-secondary mt-4">
+          <p class="mb-0">&copy; 2024 Diabasis — Tous droits réservés.</p>
         </div>
       </div>
+    </footer>
 
-      <!-- Footer bottom -->
-      <div class="text-center pt-3 border-top border-secondary mt-4">
-        <p class="mb-0">&copy; 2024 Diabasis — Tous droits réservés.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../JS/navbarDiabasis.js" defer></script>
-  <script src="../JS/navportfolio.js" defer></script>
-</body>
-
+    <script src="../JS/navbarDiabasis.js" defer></script>
+    <script src="../JS/navportfolio.js" defer></script>
+  </body>
 </html>

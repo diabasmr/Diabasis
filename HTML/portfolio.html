@@ -22,14 +22,12 @@
     ></script>
     <link rel="stylesheet" type="text/css" href="../CSS/portfolio.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/style-harmony.css" />
-    <link rel="shortcut icon" href="../pictures/Di-icon.ico" />
+    <link rel="shortcut icon" href="../pictures/Di-icon.png" />
     <script src="../JS/index.js" defer></script>
   </head>
 
   <body>
     <button id="scrollTopBtn" class="btn" style="display: none">TOP</button>
-
-    <div id="include-Dnav"></div>
 
     <style>
       /* Arrière-plan global */
@@ -66,28 +64,15 @@
         />
 
         <!-- Vidéo par-dessus -->
-        <video
+        <iframe
           id="cv"
           class="project-video position-absolute top-50 start-50 translate-middle"
-          controls
-          autoplay
-          playsinline
+          src="https://player.vimeo.com/video/1146646148?autoplay=1&muted=1&loop=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
           onclick="openFullscreen(this)"
-        >
-          <source
-            src="https://cvvideodiabasis.netlify.app/SAMOURA_DIABA_TPD_CV_Video.mp4"
-            type="video/mp4"
-          />
-          Your browser doesn't support video playback.
-        </video>
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const video = document.getElementById("cv");
-            if (video) {
-              video.volume = 0.3; // 30% du volume
-            }
-          });
-        </script>
+        ></iframe>
       </div>
 
       <div class="col-md-1 col-1"></div>
@@ -114,7 +99,7 @@
           class="d-flex gap-3 justify-content-md-start justify-content-center"
         >
           <a
-            href="../pictures/portfolio/pro/CV_Diaba_Samoura.pdf"
+            href="../pictures/pro/CV_Diaba_Samoura.pdf"
             download
             target="_blank"
             class="btn btn-outline-dark"
@@ -136,9 +121,10 @@
       <div class="row mb-3">
         <!-- DIABASIS -->
         <div class="col-4 col-md-2">
-          <a href="../index.html" class="project-card">
+          <a href="../index.html" class="project-card disabled-link"
+            onclick="return false;">
             <img
-              src="../pictures/portfolio/diabasis-mockup.png"
+              src="../pictures/diabasis-mockup.png"
               alt="Diabasis Blog"
               class="img-fluid project-img rounded shadow"
             />
@@ -154,7 +140,7 @@
         <div class="col-8 mt-3 mt-md-0 col-md-3">
           <a href="kiyomi.html" class="project-card">
             <img
-              src="../pictures/portfolio/KIYOMI/logo_mockup.webp"
+              src="../pictures/KIYOMI/logo_mockup.webp"
               alt="Kiyomi"
               class="img-fluid project-img rounded shadow"
             />
@@ -170,7 +156,7 @@
         <div class="col-4 mt-3 mt-md-0 col-md-3">
           <a href="webdoc.html" class="project-card">
             <img
-              src="../pictures/portfolio/HABILLAGEDESELEGANTES/POSTS_HABILLAGE_DES_ELEGANTES_page-0001.jpg"
+              src="../pictures/HABILLAGEDESELEGANTES/POSTS_HABILLAGE_DES_ELEGANTES_page-0001.jpg"
               alt="Webdocumentary"
               class="img-fluid project-img rounded shadow"
             />
@@ -186,7 +172,7 @@
         <div class="col-6 mt-3 mt-md-0 col-md-4">
           <a href="rezoom.html" class="project-card">
             <img
-              src="../pictures/portfolio/REZOOM/rezoom4.webp"
+              src="../pictures/REZOOM/rezoom4.webp"
               alt="ReZoom"
               class="img-fluid project-img rounded shadow"
             />
@@ -204,7 +190,7 @@
         <div class="col-6 mt-3 mt-md-0 col-md-3">
           <a href="hevah.html" class="project-card">
             <img
-              src="../pictures/portfolio/HEVAH/imagevest1.png"
+              src="../pictures/HEVAH/imagevest1.png"
               alt="Hevah"
               class="img-fluid project-img rounded shadow"
             />
@@ -220,7 +206,7 @@
         <div class="col-6 mt-3 mt-md-0 col-md-3">
           <a href="cornelio.html" class="project-card">
             <img
-              src="../pictures/portfolio/CORNELIO/cornelio_truck.png"
+              src="../pictures/CORNELIO/cornelio_truck.png"
               alt="Cornelio"
               class="img-fluid project-img rounded shadow"
             />
@@ -236,7 +222,7 @@
         <div class="col-8 col-md-4">
           <a href="speaklens.html" class="project-card">
             <img
-              src="../pictures/portfolio/SPEAKLENS/speaklens_post3.webp"
+              src="../pictures/SPEAKLENS/speaklens_post3.webp"
               alt="Speaklens"
               class="img-fluid project-img rounded shadow"
             />
@@ -251,7 +237,7 @@
         <div class="col-6 mt-3 mt-md-0 col-md-2">
           <a href="falldiaries.html" class="project-card">
             <img
-              src="../pictures/portfolio/FALLDIARIES/pages_2.png"
+              src="../pictures/FALLDIARIES/pages_2.png"
               alt="Fall Diaries MAg"
               class="img-fluid project-img rounded shadow"
             />
@@ -315,7 +301,7 @@
             onclick="return false;"
           >
             <img
-              src="../pictures/portfolio/NHSKILLS/Phone mockup.png"
+              src="../pictures/NHSKILLS/Phone mockup.png"
               alt="NH Skills"
               class="img-fluid project-img rounded shadow"
             />
@@ -331,7 +317,7 @@
         <div class="col-6 mt-3 mt-md-0 col-md-3">
           <a href="voyasia.html" class="project-card">
             <img
-              src="../pictures/portfolio/VOYASIA/MacBook_Mockup_1.webp"
+              src="../pictures/VOYASIA/MacBook_Mockup_1.webp"
               alt="Voyasia"
               class="img-fluid project-img rounded shadow"
             />
@@ -354,7 +340,7 @@
             onclick="return false;"
           >
             <img
-              src="../pictures/portfolio/Di-icon.png"
+              src="../pictures/Di-icon.png"
               alt="Sendto"
               class="img-fluid project-img rounded shadow"
             />
@@ -374,7 +360,7 @@
             onclick="return false;"
           >
             <img
-              src="../pictures/portfolio/Di-icon.png"
+              src="../pictures/Di-icon.png"
               alt="ACESBLY"
               class="img-fluid project-img rounded shadow"
             />

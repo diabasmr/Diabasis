@@ -76,7 +76,7 @@
   text-decoration: underline;
 }
 
-video {
+iframe {
   width: 100%;
 }
 
@@ -84,11 +84,14 @@ video {
   margin-left: 30%;
   width: 80%;
   min-width: 300px;
+  aspect-ratio: 16 / 9;
   height: auto;
+
   z-index: 2;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
+
 
 @media (max-width: 1024px) {
   #front {
