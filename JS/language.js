@@ -11,6 +11,16 @@ const translations = {
     download_cv: "🪪 Download my CV",
 
     projects_title: "👀 My projects",
+    blog: "Personal Blog",
+    resto: "Restaurant website",
+    webdoc: "Webdocumentary",
+    equip_book: "Equipment booking website",
+    brand_mark_id: "Marketing/Brand Identity",
+    brand_id: "Brand Identity",
+
+    cs_skills: "CS Skills",
+    crea_skills: "Creative & Digital Skills",
+    audiovisuel: "Audiovisual Productions (Adobe Premiere Pro + After Effects + professionnal equipment)",
 
     edu_title: "Education",
     edu_1_title: "Bachelor in Multimedia & Internet Professions",
@@ -34,8 +44,18 @@ const translations = {
     download_cv: "🪪 Télécharger mon CV",
 
     projects_title: "👀 Mes projets",
+    blog: "Blog personnel",
+    resto: "Site de restaurant",
+    webdoc: "Webdocumentaire",
+    equip_book: "Site de réservation de matériel",
+    brand_mark_id: "Marketing/Identité de marque",
+    brand_id: "Identité de marque",
 
-    edu_title: "Éducation",
+    cs_skills: "Compétences en Informatique",
+    crea_skills: "Compétences Créatives & Digitales",
+    audiovisuel: "Audiovisuel (Adobe Premiere Pro + After Effects + matériel professionnel)",
+
+    edu_title: "Formation",
     edu_1_title: "BUT Métiers du Multimédia et de l’Internet",
     edu_1_desc: "(2024 - aujourd’hui) — Université Gustave Eiffel",
     edu_2_title: "BAC mention très bien (Maths, NSI, Anglais)",
