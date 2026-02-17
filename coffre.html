@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffre Pirate 3D</title>
+
+  <!-- Librairie model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Fonts style pirate -->
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Styles généraux ===== */
+    body {
+      margin: 0;
+      font-family: 'Pirata One', cursive;
+      background: linear-gradient(180deg, #0b0b0b 0%, #1a1a1a 100%);
+      color: #f4e1c1;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 20px 0;
+      color: #f4e1c1;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Container principal ===== */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* ===== Model-viewer style ===== */
+    model-viewer {
+      width: 100%;
+      max-width: 800px;
+      height: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #000;
+      margin-bottom: 30px;
+      background-color: #1a1a1a;
+    }
+
+    .progress-bar { height: 5px; background: #333; border-radius: 5px; overflow: hidden; }
+    .update-bar { height: 100%; width: 0%; background: #f4e1c1; transition: width 0.3s ease; }
+
+    #ar-button {
+      padding: 10px 25px;
+      background-color: #f4e1c1;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.2s ease;
+    }
+    #ar-button:hover { transform: scale(1.1); }
+
+    #ar-prompt img { width: 60px; animation: bounce 2s infinite; margin-top: 10px; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ===== Texte historique ===== */
+    .history {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      model-viewer { height: 350px; }
+      p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Le Trésor des Pirates</h1>
+
+  <div class="container">
+    <!-- Modèle 3D interactif -->
+    <model-viewer 
+      src="coffre final.glb" 
+      ar 
+      ar-modes="webxr scene-viewer quick-look" 
+      camera-controls 
+      auto-rotate
+      poster="poster.webp" 
+      shadow-intensity="1"
+      exposure="1">
+      
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+
+      <button slot="ar-button" id="ar-button">Voir dans votre espace</button>
+
+      <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR guide">
+      </div>
+    </model-viewer>
+
+    <!-- Texte historique immersif -->
+    <div class="history">
+      <h2>Un coffre légendaire</h2>
+      <p>
+        Au XVIIIᵉ siècle, les pirates des Caraïbes accumulaient des trésors volés lors de leurs expéditions maritimes. 
+        Ce coffre imaginaire est inspiré des coffres que l’on retrouvait sur les navires de corsaires, remplis d’or, 
+        de bijoux et de cartes secrètes. Chaque objet raconte une histoire de bravoure, de ruse et d’aventure sur les flots.
+      </p>
+      <p>
+        Certains coffres étaient enterrés sur des îles isolées, donnant naissance aux légendes des cartes au trésor, 
+        qui ont inspiré de nombreux récits et films de pirates. Avec cette expérience 3D, vous pouvez explorer ce trésor 
+        comme si vous étiez à bord d’un galion, prêt à découvrir les secrets cachés.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

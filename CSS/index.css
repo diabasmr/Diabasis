@@ -1,0 +1,130 @@
+/* CV VIDEO */
+#cv {
+  width: 30%;
+  min-width: 300px;
+  aspect-ratio: 16 / 9;
+  height: 30%;
+  border-radius: 10px;
+}
+
+/* POSTE */
+.poste-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+  position: relative;
+}
+
+.poste {
+  display: inline-block;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* CARROUSEL */
+.carousel-section {
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 18vw;
+}
+
+.carousel-card {
+  flex: 0 0 20%;
+  scroll-snap-align: center;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1),
+              opacity 0.6s ease,
+              filter 0.6s ease;
+  transform: scale(0.8);
+  filter: blur(3px);
+  opacity: 0.5;
+  text-decoration: none;
+  color: black;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 360px; /* 🔥 PLUS PETIT */
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.carousel-card:hover img {
+  transform: scale(1.03);
+}
+
+/* ACTIVE CARD */
+.carousel-card.active {
+  flex: 0 0 32%;
+  transform: scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* TEXTE */
+.carousel-caption {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.4s ease;
+}
+
+.carousel-card.active .carousel-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-number {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.project-desc {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+/* Fade côtés plus subtil */
+.carousel-section::before,
+.carousel-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 12%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-section::before {
+  left: 0;
+  background: linear-gradient(to right, white 30%, transparent);
+}
+
+.carousel-section::after {
+  right: 0;
+  background: linear-gradient(to left, white 30%, transparent);
+}
+
+/* Hide scrollbar */
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.carousel-wrapper {
+  scrollbar-width: none;
+}

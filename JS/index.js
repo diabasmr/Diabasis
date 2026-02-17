@@ -1,4 +1,4 @@
-const present = document.getElementById(`intro`)
+const present = document.getElementById(`intro`);
 
 window.addEventListener("load", () => {
   // Déclenche l'action après 0.5 secondes
@@ -8,53 +8,53 @@ window.addEventListener("load", () => {
 });
 
 // Sélectionne le bouton
-const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 // Affiche ou cache le bouton selon la position du scroll
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
-    scrollTopBtn.style.display = 'block';
+    scrollTopBtn.style.display = "block";
   } else {
-    scrollTopBtn.style.display = 'none';
+    scrollTopBtn.style.display = "none";
   }
 });
 
 // Scroll jusqu'en haut quand on clique sur le bouton
-scrollTopBtn.addEventListener('click', () => {
+scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Animation fluide
+    behavior: "smooth", // Animation fluide
   });
 });
 
 //CLIC REVIEW
 //sélectionne tous les articles
-const livres = document.querySelectorAll('.livre');
+const livres = document.querySelectorAll(".livre");
 
 livres.forEach(function (livre) {
-  const image = livre.querySelector('img'); // image de chaque livre
-  const review = livre.querySelector('.review'); // review correspondante
+  const image = livre.querySelector("img"); // image de chaque livre
+  const review = livre.querySelector(".review"); // review correspondante
 
   // Clic sur l'image pour afficher/masquer la review
-  image.addEventListener('click', function () {
+  image.addEventListener("click", function () {
     // Masque toutes les reviews sauf celle cliquée
-    document.querySelectorAll('.review').forEach(r => {
-      if (r !== review) r.classList.remove('visible');
+    document.querySelectorAll(".review").forEach((r) => {
+      if (r !== review) r.classList.remove("visible");
     });
 
     // Toggle l'affichage de la review du livre cliqué
-    review.classList.toggle('visible');
+    review.classList.toggle("visible");
   });
 });
 
 //CINEMA FACTS
 //IMAGE SLIDER
 let currentIndex = 0;
-const carrousels = document.querySelector('.slidescine');
-const totalSlides = document.querySelectorAll('.slidecine').length;
+const carrousels = document.querySelector(".slidescine");
+const totalSlides = document.querySelectorAll(".slidecine").length;
 
 function updatecarrousel() {
-  const slideWidth = document.querySelector('.carrouselcine').offsetWidth;
+  const slideWidth = document.querySelector(".carrouselcine").offsetWidth;
   carrousels.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
@@ -68,7 +68,7 @@ function prevcarrousel() {
   updatecarrousel();
 }
 
-window.addEventListener('resize', updatecarrousel); // Responsive !
+window.addEventListener("resize", updatecarrousel); // Responsive !
 
 //JOURNAL SLIDER
 const slides = document.querySelectorAll(".slider img");
@@ -86,11 +86,10 @@ function initializeSlider() {
 function showSlide(index) {
   if (index >= slides.length) {
     slideIndex = 0;
-  }
-  else if (index < 0) {
+  } else if (index < 0) {
     slideIndex = slides.length - 1;
   }
-  slides.forEach(slide => {
+  slides.forEach((slide) => {
     slide.classList.remove("displaySlide");
   });
   slides[slideIndex].classList.add("displaySlide");
@@ -106,31 +105,31 @@ function nextSlide() {
 }
 
 //articles
-const cartes = document.querySelectorAll('.card');
+const cartes = document.querySelectorAll(".card");
 
 cartes.forEach(function (carte) {
   const article = carte.nextElementSibling;
 
   // Clic sur l'image pour afficher/masquer l'article
-  carte.addEventListener('click', function () {
+  carte.addEventListener("click", function () {
     // Masque tous les articles sauf celui cliqué
-    document.querySelectorAll('.article').forEach(art => {
-      if (art !== article) art.classList.remove('voir');
+    document.querySelectorAll(".article").forEach((art) => {
+      if (art !== article) art.classList.remove("voir");
     });
 
-    article.classList.toggle('voir');
+    article.classList.toggle("voir");
   });
 });
 
 //JOURNAL FACTS
-const people = document.querySelectorAll('.people');
+const people = document.querySelectorAll(".people");
 
 people.forEach(function (person) {
-  const peoplePhoto = person.querySelector('.peoplePhoto'); // image de chaque livre
+  const peoplePhoto = person.querySelector(".peoplePhoto"); // image de chaque livre
 
   // Clic sur l'image pour afficher/masquer la review
-  document.querySelectorAll('.peoplePhoto').forEach(photo => {
-    photo.addEventListener('click', function (event) {
+  document.querySelectorAll(".peoplePhoto").forEach((photo) => {
+    photo.addEventListener("click", function (event) {
       const classe = event.target.id;
       console.log("ID cliqué :", classe);
 
@@ -141,41 +140,41 @@ people.forEach(function (person) {
         return;
       }
 
-      document.querySelectorAll('.peopleArticle').forEach(r => {
-        if (r !== peopleArticle) r.classList.remove('visible');
+      document.querySelectorAll(".peopleArticle").forEach((r) => {
+        if (r !== peopleArticle) r.classList.remove("visible");
       });
 
-      peopleArticle.classList.toggle('visible');
+      peopleArticle.classList.toggle("visible");
     });
-  })
+  });
 });
 
 /////////
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('.bento-box img');
-  const carte = document.getElementById('cartefashion');
-  const Imgcarte = document.getElementById('Image');
-  const closeBtn = document.getElementById('fermer');
-  const titre = document.getElementById('FashionTitle');
-  const description = document.getElementById('Description');
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".bento-box img");
+  const carte = document.getElementById("cartefashion");
+  const Imgcarte = document.getElementById("Image");
+  const closeBtn = document.getElementById("fermer");
+  const titre = document.getElementById("FashionTitle");
+  const description = document.getElementById("Description");
 
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      carte.style.display = 'flex';
+  images.forEach((img) => {
+    img.addEventListener("click", () => {
+      carte.style.display = "flex";
       Imgcarte.src = img.src;
-      Imgcarte.alt = img.alt;  //reprends l'image et le alt de l'image cliquée
+      Imgcarte.alt = img.alt; //reprends l'image et le alt de l'image cliquée
       titre.textContent = img.title;
       description.textContent = img.dataset.description;
     });
   });
 
-  closeBtn.addEventListener('click', () => {
-    carte.style.display = 'none';
+  closeBtn.addEventListener("click", () => {
+    carte.style.display = "none";
   });
 
-  window.addEventListener('click', (e) => {
+  window.addEventListener("click", (e) => {
     if (e.target === carte) {
-      carte.style.display = 'none';
+      carte.style.display = "none";
     }
   });
 });
@@ -183,9 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function openFullscreen(media) {
   if (media.requestFullscreen) {
     media.requestFullscreen();
-  } else if (media.webkitRequestFullscreen) { // Safari
+  } else if (media.webkitRequestFullscreen) {
+    // Safari
     media.webkitRequestFullscreen();
-  } else if (media.msRequestFullscreen) { // IE/Edge
+  } else if (media.msRequestFullscreen) {
+    // IE/Edge
     media.msRequestFullscreen();
   }
 }

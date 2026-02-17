@@ -12,10 +12,10 @@ body{
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden; /* Prevent horizontal scrolling */
-	background-color: #eee9d6;
+	background-color: #FFFEEF;
 	color:black;
-	font-family: Playfair-display;
-	font-size: clamp(1rem, 1.6vw, 1.2rem); /* Adaptatif selon la taille de l'écran */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: clamp(0.8rem, 2vw, 1rem); /* Adaptatif selon la taille de l'écran */
     line-height: 1.8; /* Lisibilité accrue */
 	margin:0;
 }
@@ -28,17 +28,12 @@ body{
 	font-weight: bolder;
 }
 
-.factsSubTitle {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-weight: bolder;
-	margin-left: 7%;
-}
-
 /*LIENS*/
 a{
 	text-decoration: none;
-	color:darkseagreen;
+	color:white;
 }
+/* color:darkseagreen; */
 
 a:hover{
 	color:pink;
@@ -71,11 +66,6 @@ a:focus {
 }
 .fildAriane a:hover{
 	color: pink;
-}
-
-/*CLEAR*/
-.clr{
-	clear: both;
 }
 
 /*BUTTONS*/
@@ -122,107 +112,6 @@ a:focus {
 }
 
 /*the real deal*/
-/*BARRE ACCUEIL*/
-#barre{
-	width:100%;
-}
-
-/*MENU DEROULANT*/
-/*ICONE MENU*/
-header img:first-child{
-	float:left;
-	margin-left: 10px;
-	position: fixed;
-	top:0;
-	z-index: 9999;
-	height:5rem;
-}
-
-nav{
-	top: -50em;
-	background-color:#aab687;
-	color:white;
-	width:20%;
-	height: 50em;
-	border-radius: 0 0 100px 100px;
-	text-align: center;
-	align-items: center;
-	position: absolute;
-	z-index: 999;
-    transition: top 0.3s ease;
-}
-
-nav.open{
-	top: 0;
-	position: fixed;
-}
-
-nav ul{
-	align-items: center;
-	text-align: center;
-	font-family: Art-nuvo;
-	list-style:none;
-	padding-top: 40%;
-	margin-right:20%;
-}
-
-nav li{
-	margin-bottom: 30%;
-	font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
-nav a{
-	color:white;
-	text-decoration:none;
-}
-
-nav a img{
-	height: 60px;
-	transition: transform 0.3s ease 0s;
-}
-
-nav a img:hover{
-	transform:translateY(-5px);
-}
-
-nav a:active{
-	color: coral;
-}
-
-@media(max-width:600px){
-	#main{
-		width:100%;
-		float:none;
-	}
-
-	#barre{
-		display:none;  /*PAS ENCORE SURE POUR CA*/
-	}
-
-	nav {
-        width: 100%;
-        height: 100%;
-		display:none;
-        border-radius: 0;
-		/*modifier et mettre le text en haut*/
-    }
-
-	nav li{
-		margin-bottom: 15%;
-		font-size: clamp(1.2rem, 2vw, 1rem);
-	}
-	
-	nav.open{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	
-	#sidebar{
-		width:100%;
-		float:none;
-	}
-}
 
 #working{
 	z-index:1;
