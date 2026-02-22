@@ -1,227 +1,294 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Diabasis</title>
+
     <meta name="description" content="Welcome to Diabasis portfolio" />
     <meta
       name="keywords"
       content="Diabasis, portfolio, 3D, web development, design"
     />
-    <meta charset="UTF-8" />
-    <title>Diabasis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/db9b6937ac.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css" />
-    <link rel="stylesheet" type="text/css" href="./CSS/style-harmony.css" />
+
+    <link rel="stylesheet" href="./CSS/portfolio.css" />
+    <link rel="stylesheet" href="./CSS/style-harmony.css" />
     <link rel="shortcut icon" href="./pictures/Di-icon.png" />
+
     <script src="./JS/index.js" defer></script>
-    <!-- Librairie model-viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <!-- MODEL VIEWER -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
-  <body>
-    <model-viewer
-      src="../pictures/3D/dinner.glb"
-      poster="../pictures/3D/TheDinnerPreview.webp"
-      shadow-intensity="1"
-      ar
-      camera-controls
-      touch-action="pan-y"
-      alt="A 3D model carousel"
-    >
-      <button slot="ar-button" id="ar-button">View in your space</button>
 
-      <div id="ar-prompt">
-        <img src="../../assets/hand.png" />
-      </div>
+  <body class="bg-dark text-light">
+    <!--navPortfolio-->
+    <div id="include-navp"></div>
 
-      <button id="ar-failure">AR is not tracking!</button>
-    </model-viewer>
-    <div class="slider">
-        <div class="slides">
-          <button
-            class="slide selected"
-            onclick="switchSrc(this, 'dinner')"
-            style="
-              background-image: url(&quot;../pictures/3D/TheDinnerPreview.png&quot;);
-            "
-          ></button
-          ><button
-            class="slide"
-            onclick="switchSrc(this, 'treasureChest')"
-            style="
-              background-image: url(&quot;../pictures/3D/TheDinnertPreview.png&quot;);
-            "
-          ></button
-          >
+    <div class="container-fluid vh-100">
+      <div class="row h-100">
+        <!-- GAUCHE CONTENT -->
+
+        <div class="col-lg-6 overflow-auto project-content">
+          <div class="p-5">
+            <h1 class="mb-4 text-dark fw-light">3D Design</h1>
+
+            <p class="lead text-secondary">
+              Durant la deuxième année de mes études, j'ai exploré le monde du design 3D via Blender,
+              me concentrant sur la modélisation, les textures, l'animation et la création d'environnements.
+              Dans mes débuts, j'ai expérimenté avec des tutos simples, progressant vers des projets plus complexes comme une yourte, un coffre au trésor et une scène de dîner.
+              Ainsi, j'ai développé une solide compréhension des techniques de modélisation, de texturing et d'animation, tout en affinant mon sens artistique et ma capacité à créer des scènes immersives.
+            </p>
+
+            <div class="row g-3 my-4">
+              <div class="col-md-6">
+                <img
+                  src="../pictures/3D/YurtRenderPreview.png"
+                  class="img-fluid rounded shadow-sm"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <img
+                  src="../pictures/3D/TheDinnerPreview.png"
+                  class="img-fluid rounded shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="ratio ratio-16x9 my-4">
+              <video controls class="w-100 rounded">
+                <source
+                  src="./pictures/3D/TheDinnerAnimation.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
+            <h4 class="mt-5 text-dark">Yourte 🛖</h4>
+
+            <p class="text-secondary">
+              Le projet de la yourte consistait à modéliser une yourte traditionnelle, en mettant l'accent sur les détails architecturaux et les textures réalistes. C'est nottement grâce à ce projet que j'ai découvert les possibilités offertes par les HDRI pour l'éclairage et les reflets, ce qui a grandement amélioré le réalisme de mes scènes. J'ai également appris à baker les textures pour optimiser les performances tout en conservant une qualité visuelle élevée.
+              L'idée était de créer un objet culturellement riche pour l'intégrer à un site web, en utilisant les fonctionnalités de Model Viewer pour permettre aux utilisateurs d'explorer la yourte en 3D et en apprenant plus sur l'objet à travers un court article, offrant ainsi une expérience interactive et immersive.
+            </p>
+
+            <hr>
+
+            <h4 class="mt-5 text-dark">Coffre au trésor 🪙</h4>
+
+            <p class="text-secondary">
+              Le projet du coffre au trésor consistait à créer un objet 3D complexe, en mettant l'accent sur les détails de surface et les textures réalistes. J'ai utilisé des techniques avancées de modélisation pour créer des formes complexes et des textures détaillées. Ce projet m'a permis d'améliorer ma compréhension de la géométrie complexe créées avec des curves
+              C'était aussi l'occasion d'appliquer une certaine rigueur au réalisme de mes modèles.
+            </p>
+
+            <hr>
+
+            <h4 class="mt-5 text-dark">The Dinner 🍷</h4>
+
+            <p class="text-secondary">
+              The Dinner est un projet personnel qui consistait à créer une scène de dîner en 3D, mettant en avant mes compétences en modélisation, texturing et animation. J'ai créé une table avec des plats, des couverts et des éléments de décoration, en utilisant des textures réalistes pour donner vie à la scène. J'ai également animé la scène pour découvrir les possibilités offertes par le design 3D. 
+              Ce projet m'a permis de développer une solide compréhension de la composition, de l'éclairage et de l'animation en 3D, tout en affinant mon sens artistique et ma capacité à créer des scènes immersives.
+              Cependant l'ambiance de design luxueuse gagnerait à être améliorée en ajoutant des éléments de texturing et en corrigeant certains élément pour un rendu plus réaliste et moins "trop parfait". C'est un projet que je compte continuer à améliorer pour en faire une scène plus aboutie et immersive.
+          </div>
         </div>
+
+        <!-- DROITE : MODEL VIEWER -->
+
+        <div class="col-lg-6 p-0 viewer-column">
+          <div class="viewer-wrapper m-4">
+            <model-viewer
+              id="mainViewer"
+              src="../pictures/3D/yourteFinale.glb"
+              poster="../pictures/3D/YurtRenderPreview.webp"
+              environment-image="../pictures/3D/HDRI/alps_field_4k.hdr"
+              skybox-image="../pictures/3D/HDRI/alps_field_4k.hdr"
+              exposure="1"
+              shadow-intensity="1"
+              auto-rotate
+              camera-controls
+              ar
+              touch-action="pan-y"
+            >
+              <button slot="ar-button" id="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+
+            <!-- SLIDER -->
+            <div class="slider">
+              <div class="slides">
+                <button
+                  class="slide"
+                  onclick="switchSrc(this, 'yourteFinale')"
+                  style="
+                    background-image: url(&quot;../pictures/3D/YurtRenderPreview.png&quot;);
+                  "
+                ></button>
+
+                <button
+                  class="slide"
+                  onclick="switchSrc(this, 'treasureChest')"
+                  style="
+                    background-image: url(&quot;../pictures/3D/TreasureChestPreview.png&quot;);
+                  "
+                ></button>
+
+                <button
+                  class="slide selected"
+                  onclick="switchSrc(this, 'dinner')"
+                  style="
+                    background-image: url(&quot;../pictures/3D/TheDinnerPreview.png&quot;);
+                  "
+                ></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
+    </div>
+
+    <!-- SCRIPT HDRI SWITCH -->
+
     <script type="module">
-      const modelViewer = document.querySelector("model-viewer");
+      window.addEventListener("DOMContentLoaded", () => {
+        const modelViewer = document.querySelector("#mainViewer");
 
-      window.switchSrc = (element, name) => {
-        const base = "../pictures/3D/" + name;
-        modelViewer.src = base + ".glb";
-        modelViewer.poster = base + ".webp";
-        const slides = document.querySelectorAll(".slide");
-        slides.forEach((element) => {
-          element.classList.remove("selected");
-        });
-        element.classList.add("selected");
-      };
+        const projects = {
+          yourteFinale: {
+            model: "../pictures/3D/yourteFinale.glb",
+            poster: "../pictures/3D/YurtRenderPreview.webp",
+            hdri: "../pictures/3D/HDRI/alps_field_4k.hdr",
+          },
 
-      document
-        .querySelector(".slider")
-        .addEventListener("beforexrselect", (ev) => {
-          // Keep slider interactions from affecting the XR scene.
-          ev.preventDefault();
-        });
+          treasureChest: {
+            model: "../pictures/3D/treasureChest.glb",
+            poster: "../pictures/3D/TreasureChestPreview.png",
+            hdri: "../pictures/3D/HDRI/drachenfels_cellar_4k.hdr",
+          },
+
+          dinner: {
+            model: "../pictures/3D/dinner.glb",
+            poster: "../pictures/3D/TheDinnerPreview.webp",
+            hdri: "../pictures/3D/HDRI/brown_photostudio_02_4k.hdr",
+          }
+        };
+
+        window.switchSrc = (element, name) => {
+          const project = projects[name];
+
+          modelViewer.style.opacity = "0";
+
+          setTimeout(() => {
+            modelViewer.setAttribute("src", project.model);
+            modelViewer.setAttribute("poster", project.poster);
+            modelViewer.setAttribute("environment-image", project.hdri);
+            modelViewer.setAttribute("skybox-image", project.hdri);
+
+            modelViewer.style.opacity = "1";
+          }, 250);
+
+          /* slider */
+          document
+            .querySelectorAll(".slide")
+            .forEach((el) => el.classList.remove("selected"));
+
+          element.classList.add("selected");
+        };
+
+        document
+          .querySelector(".slider")
+          .addEventListener("beforexrselect", (ev) => {
+            ev.preventDefault();
+          });
+      });
     </script>
 
+    <!-- STYLE -->
+
     <style>
-      /* This keeps child nodes hidden while the element loads */
-      :not(:defined) > * {
-        display: none;
+      body {
+        overflow: hidden;
+      }
+
+      /* DROITE */
+
+      .viewer-column {
+        background: #f9f2f2;
+      }
+
+      .viewer-wrapper {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       model-viewer {
-        background-color: #eeeeee00;
-        overflow-x: hidden;
-        height: 500px;
-        width: 500px;
+        width: 100%;
+        height: 80vh;
+        transition: opacity 0.35s ease;
       }
 
-      #ar-button {
-        background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        background-position: 12px 50%;
-        background-color: #fff;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        bottom: 132px;
-        padding: 0px 16px 0px 40px;
-        font-family:
-          Roboto Regular,
-          Helvetica Neue,
-          sans-serif;
-        font-size: 14px;
-        color: #4285f4;
-        height: 36px;
-        line-height: 36px;
-        border-radius: 18px;
-        border: 1px solid #dadce0;
+      /* GAUCHE */
+
+      .project-content {
+        height: 100vh;
+        background: white;
       }
 
-      #ar-button:active {
-        background-color: #e8eaed;
-      }
-
-      #ar-button:focus {
-        outline: none;
-      }
-
-      #ar-button:focus-visible {
-        outline: 1px solid #4285f4;
-      }
-
-      @keyframes circle {
-        from {
-          transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
-        }
-        to {
-          transform: translateX(-50%) rotate(360deg) translateX(50px)
-            rotate(-360deg);
-        }
-      }
-
-      @keyframes elongate {
-        from {
-          transform: translateX(100px);
-        }
-        to {
-          transform: translateX(-100px);
-        }
-      }
-
-      model-viewer > #ar-prompt {
-        position: absolute;
-        left: 50%;
-        bottom: 175px;
-        animation: elongate 2s infinite ease-in-out alternate;
-        display: none;
-      }
-
-      model-viewer[ar-status="session-started"] > #ar-prompt {
-        display: block;
-      }
-
-      model-viewer > #ar-prompt > img {
-        animation: circle 4s linear infinite;
-      }
-
-      model-viewer > #ar-failure {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 175px;
-        display: none;
-      }
-
-      model-viewer[ar-tracking="not-tracking"] > #ar-failure {
-        display: block;
-      }
+      /* SLIDER */
 
       .slider {
+        position: absolute;
+        bottom: 20px;
         width: 100%;
         text-align: center;
-        overflow: hidden;
-        position: absolute;
-        bottom: 16px;
       }
 
       .slides {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
+        justify-content: center;
+        gap: 10px;
       }
 
       .slide {
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        width: 100px;
-        height: 100px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #fff;
-        margin-right: 10px;
+        width: 90px;
+        height: 90px;
         border-radius: 10px;
+        background-size: cover;
         border: none;
-        display: flex;
+        opacity: 0.6;
+        transition: 0.3s;
       }
 
+      .slide:hover,
       .slide.selected {
-        border: 2px solid #4285f4;
-      }
-
-      .slide:focus {
-        outline: none;
-      }
-
-      .slide:focus-visible {
-        outline: 1px solid #4285f4;
+        opacity: 1;
+        transform: scale(1.05);
+        border: 2px solid pink;
       }
     </style>
+    
+    <script src="../JS/navportfolio.js" defer></script>
   </body>
 </html>
